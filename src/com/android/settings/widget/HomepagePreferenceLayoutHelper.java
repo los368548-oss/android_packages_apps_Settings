@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2022 The Android Open Source Project
+ * Copyright (C) 2025 The HavocOOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +17,11 @@
 
 package com.android.settings.widget;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import androidx.preference.Preference;
@@ -26,7 +31,7 @@ import com.android.settings.R;
 import com.android.settings.flags.Flags;
 import com.android.settingslib.widget.SettingsThemeHelper;
 
-/** Helper for homepage preference to manage layout. */
+/** Helper for homepage preference to manage layout with visual effects. */
 public class HomepagePreferenceLayoutHelper {
 
     private View mIcon;
@@ -35,10 +40,17 @@ public class HomepagePreferenceLayoutHelper {
     private View mAlertUnnumbered;
     private View mAlertNumberedFrame;
     private TextView mAlertNumberText;
+    private View mShimmerLayer;
+    private View mIconGlow;
     private boolean mIconVisible = true;
     private int mIconPaddingStart = -1;
     private int mTextPaddingStart = -1;
     private int mAlertValue = -1;
+    
+    // Shimmer animation
+    private Handler mShimmerHandler;
+    private Runnable mShimmerRunnable;
+    private boolean mShimmerRunning = false;
 
     /** The interface for managing preference layouts on homepage */
     public interface HomepagePreferenceLayout {
@@ -51,6 +63,7 @@ public class HomepagePreferenceLayoutHelper {
                 SettingsThemeHelper.isExpressiveTheme(preference.getContext())
                         ? R.layout.homepage_preference_expressive
                         : R.layout.homepage_preference);
+        mShimmerHandler = new Handler(Looper.getMainLooper());
     }
 
     /** Sets whether the icon should be visible */
@@ -111,9 +124,51 @@ public class HomepagePreferenceLayoutHelper {
         mAlertUnnumbered = holder.findViewById(R.id.alert_unnumbered);
         mAlertNumberedFrame = holder.findViewById(R.id.alert_numbered_frame);
         mAlertNumberText = (TextView) holder.findViewById(R.id.alert_number_fg);
+        mShimmerLayer = holder.findViewById(R.id.shimmer_layer);
+        mIconGlow = holder.findViewById(R.id.icon_glow);
+        
         setIconVisible(mIconVisible);
         setIconPaddingStart(mIconPaddingStart);
         setTextPaddingStart(mTextPaddingStart);
         setAlert(mAlertValue);
+        
+        // Start shimmer animation
+        startShimmerAnimation();
+    }
+
+    private void startShimmerAnimation() {
+        if (mShimmerRunning || mShimmerLayer == null) {
+            return;
+        }
+
+        mShimmerRunning = true;
+        Animation shimmerAnim = AnimationUtils.loadAnimation(
+                mShimmerLayer.getContext(), R.anim.shimmer_animation);
+        
+        mShimmerRunnable = new Runnable() {
+            @Override
+            public void run() {
+                if (mShimmerLayer != null && mShimmerRunning) {
+                    mShimmerLayer.startAnimation(shimmerAnim);
+                    mShimmerHandler.postDelayed(this, 3500);
+                }
+            }
+        };
+        
+        // Stagger the start of shimmer for each item
+        mShimmerHandler.postDelayed(mShimmerRunnable, (long) (Math.random() * 2000));
+    }
+
+    /**
+     * Stop shimmer animation when the view is recycled
+     */
+    public void stopShimmerAnimation() {
+        mShimmerRunning = false;
+        if (mShimmerHandler != null && mShimmerRunnable != null) {
+            mShimmerHandler.removeCallbacks(mShimmerRunnable);
+        }
+        if (mShimmerLayer != null) {
+            mShimmerLayer.clearAnimation();
+        }
     }
 }
