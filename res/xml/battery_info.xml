@@ -21,6 +21,14 @@
     android:title="@string/battery_info"
     settings:keywords="@string/keywords_battery_info">
 
+    <!-- Battery Banner -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="battery_banner"
+        android:layout="@layout/settings_category_banner"
+        android:selectable="false"
+        android:order="-1000"
+        settings:controller="com.android.settings.fuelgauge.BatteryBannerPreferenceController"/>
+
     <Preference
         android:key="battery_info_technology"
         android:title="@string/battery_technology"

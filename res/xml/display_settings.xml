@@ -21,6 +21,14 @@
     android:title="@string/display_settings"
     settings:keywords="@string/keywords_display">
 
+    <!-- Display Banner -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="display_banner"
+        android:layout="@layout/settings_category_banner"
+        android:selectable="false"
+        android:order="-300"
+        settings:controller="com.android.settings.display.DisplayBannerPreferenceController"/>
+
     <PreferenceCategory
         android:key="category_brightness"
         android:title="@string/category_name_brightness"

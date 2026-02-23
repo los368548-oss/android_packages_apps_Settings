@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- Settings Banner Background - 10-Level Glassmorphic Design -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Layer 1: Base gradient background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:centerColor="#25FFFFFF"
+                android:endColor="#15FFFFFF"
+                android:startColor="#30FFFFFF"
+                android:type="linear"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+    
+    <!-- Layer 2: Primary glass surface -->
+    <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#30FFFFFF"/>
+            <corners android:radius="19dp"/>
+        </shape>
+    </item>
+    
+    <!-- Layer 3: Subtle gradient overlay for depth -->
+    <item android:top="2dp" android:bottom="2dp" android:left="2dp" android:right="2dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="180"
+                android:centerColor="#08FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:startColor="#12FFFFFF"
+                android:type="linear"/>
+            <corners android:radius="18dp"/>
+        </shape>
+    </item>
+    
+    <!-- Layer 4: Inner highlight for glass effect -->
+    <item android:top="2dp" android:left="2dp" android:right="2dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:centerColor="#00FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:startColor="#25FFFFFF"
+                android:type="linear"/>
+            <corners android:radius="18dp"/>
+        </shape>
+    </item>
+    
+    <!-- Layer 5: Outer border glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="1dp"
+                android:color="#40FFFFFF"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+    
+    <!-- Layer 6: Inner border for definition -->
+    <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="1dp"
+                android:color="#20FFFFFF"/>
+            <corners android:radius="19dp"/>
+        </shape>
+    </item>
+    
+</layer-list>

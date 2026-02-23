@@ -79,6 +79,16 @@
     <string name="gpu_info_title">GPU</string>
     <string name="gpu_info_default">Not available</string>
 
+    <!-- Settings Category Banners -->
+    <string name="apps_banner_subtitle">Manage your installed applications</string>
+    <string name="battery_banner_subtitle_good">Battery is in good condition</string>
+    <string name="battery_banner_subtitle_low">Consider enabling battery saver</string>
+    <string name="display_banner_subtitle">Brightness, dark mode, and screen settings</string>
+    <string name="security_banner_subtitle">Screen lock, fingerprint, and privacy</string>
+    <string name="sound_banner_subtitle">Volume, ringtones, and vibration</string>
+    <string name="storage_banner_subtitle">Manage device storage and files</string>
+    <string name="network_banner_subtitle">Wi-Fi, mobile data, and hotspot</string>
+
     <!-- Device Info Hardware Category -->
     <string name="device_info_hardware_category_title">Hardware info</string>
 

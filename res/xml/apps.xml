@@ -21,6 +21,14 @@
     android:key="apps_screen"
     android:title="@string/apps_dashboard_title">
 
+    <!-- Apps Banner -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="apps_banner"
+        android:layout="@layout/settings_category_banner"
+        android:selectable="false"
+        android:order="-1000"
+        settings:controller="com.android.settings.applications.AppsBannerPreferenceController"/>
+
     <Preference
         android:key="all_app_infos"
         android:title="@string/all_apps"

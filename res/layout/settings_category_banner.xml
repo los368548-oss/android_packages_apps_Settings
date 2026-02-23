@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- Reusable Settings Category Banner with Glassmorphic Design -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <FrameLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <!-- Main Background with glassmorphic effect -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/settings_banner_background"/>
+
+        <!-- Shimmer overlay layer -->
+        <View
+            android:id="@+id/shimmer_layer"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/shimmer_gradient"
+            android:visibility="visible"/>
+
+        <!-- Top gradient accent -->
+        <View
+            android:id="@+id/accent_bar"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/havoc_banner_accent_gradient"/>
+
+        <!-- Content container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Icon Container with Glow -->
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="14dp">
+
+                <!-- Icon background glow -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/device_info_icon_bg"/>
+
+                <!-- Icon -->
+                <ImageView
+                    android:id="@+id/banner_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_device_info_default"
+                    android:tint="@color/havoc_banner_accent"
+                    android:contentDescription="@null"/>
+
+            </FrameLayout>
+
+            <!-- Text Content -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/banner_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.TitleMedium"
+                    android:textColor="@color/havoc_banner_title"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.01"/>
+
+                <!-- Subtitle/Description -->
+                <TextView
+                    android:id="@+id/banner_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.BodyMedium"
+                    android:textColor="@color/havoc_banner_subtitle"
+                    android:maxLines="2"
+                    android:ellipsize="end"/>
+
+            </LinearLayout>
+
+            <!-- Optional Arrow -->
+            <ImageView
+                android:id="@+id/banner_arrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_right"
+                android:tint="@color/havoc_banner_accent"
+                android:alpha="0.7"
+                android:visibility="gone"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
