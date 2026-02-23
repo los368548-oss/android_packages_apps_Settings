@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- HavocOOS Banner Preference with Enhanced Glassmorphic Design -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <FrameLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <!-- Main Background with glassmorphic effect -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/havoc_banner_background"/>
+
+        <!-- Shimmer overlay layer -->
+        <View
+            android:id="@+id/shimmer_layer"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/shimmer_gradient"
+            android:visibility="visible"/>
+
+        <!-- Top gradient accent -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/havoc_banner_accent_gradient"/>
+
+        <!-- Content container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:gravity="center_vertical">
+
+            <!-- Logo Container with glow effect -->
+            <FrameLayout
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginEnd="16dp">
+
+                <!-- Outer glow ring -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/havoc_logo_glow"/>
+
+                <!-- Logo -->
+                <ImageView
+                    android:id="@+id/havoc_logo"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_havoc_logo"
+                    android:contentDescription="@string/havoc_logo_description"
+                    android:tint="@color/havoc_banner_accent"/>
+
+            </FrameLayout>
+
+            <!-- Text Content -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- HavocOOS Title -->
+                <TextView
+                    android:id="@+id/havoc_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/havoc_oos_title"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.HeadlineMedium"
+                    android:textColor="@color/havoc_banner_title"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.02"/>
+
+                <!-- Version Info -->
+                <TextView
+                    android:id="@+id/havoc_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.BodyMedium"
+                    android:textColor="@color/havoc_banner_subtitle"
+                    android:letterSpacing="0.01"/>
+
+                <!-- Update Status -->
+                <TextView
+                    android:id="@+id/havoc_update_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/tap_to_check_update"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.LabelSmall"
+                    android:textColor="@color/havoc_banner_accent"
+                    android:drawableStart="@drawable/ic_update_available"
+                    android:drawablePadding="6dp"/>
+
+            </LinearLayout>
+
+            <!-- Arrow Indicator -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_right"
+                android:tint="@color/havoc_banner_accent"
+                android:alpha="0.7"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

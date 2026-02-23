@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- Enhanced Glassmorphic Banner Background - 10 Level Depth Effect -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#25FF8A65">
+    
+    <!-- Mask for ripple bounds -->
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFFFF"/>
+            <corners android:radius="24dp"/>
+        </shape>
+    </item>
+    
+    <item>
+        <layer-list>
+            <!-- Level 1: Deep shadow base -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#0A000000"/>
+                    <corners android:radius="24dp"/>
+                    <padding 
+                        android:left="2dp"
+                        android:top="2dp"
+                        android:right="2dp"
+                        android:bottom="4dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 2: Outer glow -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#08FF8A65"/>
+                    <corners android:radius="23dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 3: Base gradient for depth -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="145"
+                        android:startColor="#18FFFFFF"
+                        android:centerColor="#0AFFFFFF"
+                        android:endColor="#04FFFFFF"
+                        android:type="linear"/>
+                    <corners android:radius="22dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 4: Primary glass surface -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#38FFFFFF"/>
+                    <corners android:radius="22dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 5: Accent tint overlay -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="180"
+                        android:startColor="#12FF8A65"
+                        android:centerColor="#06FF8A65"
+                        android:endColor="#00FF8A65"
+                        android:type="linear"/>
+                    <corners android:radius="22dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 6: Top highlight reflection -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="90"
+                        android:startColor="#45FFFFFF"
+                        android:centerColor="#15FFFFFF"
+                        android:endColor="#00FFFFFF"
+                        android:type="linear"/>
+                    <corners android:radius="22dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 7: Diagonal shimmer effect -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="45"
+                        android:startColor="#00FFFFFF"
+                        android:centerColor="#18FFFFFF"
+                        android:endColor="#00FFFFFF"
+                        android:type="linear"/>
+                    <corners android:radius="22dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 8: Inner glow -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="270"
+                        android:startColor="#00FFFFFF"
+                        android:centerColor="#00FFFFFF"
+                        android:endColor="#10FFFFFF"
+                        android:type="linear"/>
+                    <corners android:radius="22dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 9: Primary border -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#00FFFFFF"/>
+                    <corners android:radius="22dp"/>
+                    <stroke
+                        android:width="1.5dp"
+                        android:color="#50FFFFFF"/>
+                </shape>
+            </item>
+            
+            <!-- Level 10: Accent border glow -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#00FFFFFF"/>
+                    <corners android:radius="22dp"/>
+                    <stroke
+                        android:width="0.5dp"
+                        android:color="#35FF8A65"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    
+</ripple>

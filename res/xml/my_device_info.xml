@@ -21,16 +21,90 @@
     android:key="my_device_info_pref_screen"
     android:title="@string/about_settings">
 
+    <!-- HavocOOS Banner - Clickable to go to Updater -->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="havoc_banner"
+        android:layout="@layout/havoc_banner_preference"
+        android:selectable="true"
+        android:order="0"
+        settings:controller="com.android.settings.deviceinfo.aboutphone.HavocBannerPreferenceController"/>
+
     <com.android.settingslib.widget.LayoutPreference
         android:key="my_device_info_header"
         android:layout="@layout/settings_entity_header"
         android:selectable="false"
         settings:isPreferenceVisible="false"/>
 
+    <!-- Hardware Info Category - Glassmorphic Cards -->
+    <PreferenceCategory
+        android:key="hardware_info_category"
+        android:selectable="false"
+        android:title="@string/device_info_hardware_category_title"
+        android:order="1">
+
+        <!-- Camera Info -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="camera_info"
+            android:layout="@layout/device_info_card_preference"
+            android:selectable="false"
+            android:order="1"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.CameraInfoPreferenceController"/>
+
+        <!-- Processor Info -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="processor_info"
+            android:layout="@layout/device_info_card_preference"
+            android:selectable="false"
+            android:order="2"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.ProcessorInfoPreferenceController"/>
+
+        <!-- RAM Info -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="ram_info"
+            android:layout="@layout/device_info_card_preference"
+            android:selectable="false"
+            android:order="3"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.RamInfoPreferenceController"/>
+
+        <!-- Storage Info -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="storage_info"
+            android:layout="@layout/device_info_card_preference"
+            android:selectable="false"
+            android:order="4"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.StorageInfoPreferenceController"/>
+
+        <!-- Battery Info -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="battery_info"
+            android:layout="@layout/device_info_card_preference"
+            android:selectable="false"
+            android:order="5"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.BatteryInfoPreferenceController"/>
+
+        <!-- Display Info -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="display_info"
+            android:layout="@layout/device_info_card_preference"
+            android:selectable="false"
+            android:order="6"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.DisplayInfoPreferenceController"/>
+
+        <!-- GPU Info -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="gpu_info"
+            android:layout="@layout/device_info_card_preference"
+            android:selectable="false"
+            android:order="7"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.GpuInfoPreferenceController"/>
+
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:key="basic_info_category"
         android:selectable="false"
-        android:title="@string/my_device_info_basic_info_category_title">
+        android:title="@string/my_device_info_basic_info_category_title"
+        android:order="2">
 
         <!-- Device name -->
         <com.android.settings.widget.ValidatedEditTextPreference

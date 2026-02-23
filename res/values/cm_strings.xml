@@ -45,6 +45,43 @@
     <!-- Device Info screen. HavocOOS version. -->
     <string name="havoc_version">HavocOOS version</string>
 
+    <!-- HavocOOS Banner strings -->
+    <string name="havoc_oos_title">HavocOOS</string>
+    <string name="havoc_logo_description">HavocOOS Logo</string>
+    <string name="tap_to_check_update">Tap to check for updates</string>
+    <string name="up_to_date">System is up to date</string>
+    <string name="update_available">Update available</string>
+
+    <!-- Device Info Card strings -->
+    <string name="camera_info_title">Camera</string>
+    <string name="camera_info_default">Not available</string>
+    <string name="processor_info_title">Processor</string>
+    <string name="storage_info_title">Storage</string>
+    <string name="storage_summary_format">%1$s used of %2$s \u2022 %3$s free</string>
+
+    <!-- RAM Info -->
+    <string name="ram_info_title">RAM</string>
+    <string name="ram_summary_format">%1$s total</string>
+    <string name="used_format">%1$s used</string>
+    <string name="free_format">%1$s free</string>
+
+    <!-- Battery Info -->
+    <string name="battery_info_title">Battery</string>
+    <string name="battery_summary_format">%1$d%% charged</string>
+    <string name="battery_summary_capacity_format">%1$d%% \u2022 %2$d mAh</string>
+    <string name="battery_level_format">%1$d%%</string>
+    <string name="battery_health_status">Health: %1$s</string>
+
+    <!-- Display Info -->
+    <string name="display_info_title">Display</string>
+
+    <!-- GPU Info -->
+    <string name="gpu_info_title">GPU</string>
+    <string name="gpu_info_default">Not available</string>
+
+    <!-- Device Info Hardware Category -->
+    <string name="device_info_hardware_category_title">Hardware info</string>
+
     <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
     <string name="show_dev_countdown_cm">{count, plural,
       =1      {You are now # step away from enabling development settings.}

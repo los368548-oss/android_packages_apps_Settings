@@ -32,6 +32,7 @@
     <!-- Highlight colors for glass reflection -->
     <color name="glassmorphic_highlight_top">#40FFFFFF</color>
     <color name="glassmorphic_highlight_shimmer">#50FFFFFF</color>
+    <color name="glassmorphic_highlight">#60FFFFFF</color>
     
     <!-- Border colors -->
     <color name="glassmorphic_border_primary">#45FFFFFF</color>
@@ -81,5 +82,19 @@
     <color name="glassmorphic_shimmer_dark_surface">#30000000</color>
     <color name="glassmorphic_shimmer_dark_highlight">#22FFFFFF</color>
     <color name="glassmorphic_shimmer_dark_border">#22FFFFFF</color>
+
+    <!-- HavocOOS Banner Colors -->
+    <color name="havoc_banner_accent">#FF8A65</color>
+    <color name="havoc_banner_title">#FFFFFFFF</color>
+    <color name="havoc_banner_subtitle">#CCFFFFFF</color>
+    <color name="havoc_banner_background">#38FFFFFF</color>
+    <color name="havoc_banner_glow">#25FF8A65</color>
+    
+    <!-- Device Info Card Colors -->
+    <color name="device_info_card_background">#35FFFFFF</color>
+    <color name="device_info_card_border">#45FFFFFF</color>
+    <color name="device_info_icon_tint">#FF8A65</color>
+    <color name="device_info_title">#FFFFFFFF</color>
+    <color name="device_info_summary">#AAFFFFFF</color>
 
 </resources>

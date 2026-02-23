@@ -16,71 +16,61 @@
 -->
 <resources>
 
-    <!-- HavocOOS Enhanced Glassmorphic Card Styles -->
-    
-    <!-- Base Glassmorphic Card Style -->
-    <style name="HavocOOSCardStyle" parent="Widget.MaterialComponents.CardView">
-        <!-- Transparent background for glass effect -->
-        <item name="cardBackgroundColor">@android:color/transparent</item>
-        <!-- Rounded corners matching glassmorphic design -->
-        <item name="cardCornerRadius">@dimen/havoc_card_corner_radius</item>
-        <!-- Subtle elevation for depth -->
-        <item name="cardElevation">@dimen/havoc_elevation_low</item>
-        <!-- Prevent card from clipping ripple -->
-        <item name="cardPreventCornerOverlap">false</item>
-        <!-- Use compat padding for consistent appearance -->
-        <item name="cardUseCompatPadding">true</item>
-        <!-- Content padding -->
-        <item name="contentPadding">@dimen/havoc_padding_normal</item>
-        <!-- Ripple color -->
-        <item name="rippleColor">@color/glassmorphic_ripple_light</item>
-    </style>
-    
-    <!-- Premium Glassmorphic Card Style with Shimmer -->
-    <style name="HavocOOSCardStyle.Premium" parent="HavocOOSCardStyle">
-        <item name="cardElevation">@dimen/havoc_elevation_medium</item>
-        <item name="rippleColor">@color/glassmorphic_ripple_medium</item>
-    </style>
-    
-    <!-- Compact Glassmorphic Card Style -->
-    <style name="HavocOOSCardStyle.Compact" parent="HavocOOSCardStyle">
-        <item name="contentPadding">@dimen/havoc_padding_compact</item>
-        <item name="cardCornerRadius">@dimen/havoc_corner_radius</item>
-    </style>
-    
-    <!-- Glassmorphic Preference Container Style -->
-    <style name="HavocOOSPreferenceContainer">
-        <item name="android:background">@drawable/glassmorphic_selector</item>
+    <!-- Glassmorphic Card Style -->
+    <style name="GlassmorphicCard">
+        <item name="android:background">@drawable/device_info_card_background</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
         <item name="android:clipToPadding">false</item>
         <item name="android:clipChildren">false</item>
-        <item name="android:paddingStart">@dimen/havoc_padding_normal</item>
-        <item name="android:paddingEnd">@dimen/havoc_padding_normal</item>
-        <item name="android:paddingTop">@dimen/havoc_padding_compact</item>
-        <item name="android:paddingBottom">@dimen/havoc_padding_compact</item>
     </style>
-    
-    <!-- Glassmorphic Icon Container Style -->
-    <style name="HavocOOSIconContainer">
-        <item name="android:minWidth">@dimen/havoc_icon_container_min_width</item>
-        <item name="android:minHeight">@dimen/havoc_icon_container_min_height</item>
-        <item name="android:gravity">center</item>
-        <item name="android:paddingStart">@dimen/havoc_padding_normal</item>
+
+    <!-- Glassmorphic Banner Style -->
+    <style name="GlassmorphicBanner">
+        <item name="android:background">@drawable/havoc_banner_background</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:clipChildren">false</item>
     </style>
-    
-    <!-- Glassmorphic Title Text Style -->
-    <style name="HavocOOSTitleText" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="android:textColor">@color/settingslib_text_color_primary</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:textSize">16sp</item>
+
+    <!-- Device Info Title Style -->
+    <style name="DeviceInfoTitle" parent="TextAppearance.SettingsLib.BodyLarge">
+        <item name="android:textColor">@color/device_info_title</item>
+        <item name="android:textStyle">medium</item>
+        <item name="android:letterSpacing">0.01</item>
     </style>
-    
-    <!-- Glassmorphic Summary Text Style -->
-    <style name="HavocOOSSummaryText" parent="TextAppearance.MaterialComponents.Body2">
-        <item name="android:textColor">@color/settingslib_text_color_secondary</item>
+
+    <!-- Device Info Summary Style -->
+    <style name="DeviceInfoSummary" parent="TextAppearance.SettingsLib.BodyMedium">
+        <item name="android:textColor">@color/device_info_summary</item>
         <item name="android:maxLines">2</item>
         <item name="android:ellipsize">end</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+    </style>
+
+    <!-- Havoc Banner Title Style -->
+    <style name="HavocBannerTitle" parent="TextAppearance.SettingsLib.HeadlineMedium">
+        <item name="android:textColor">@color/havoc_banner_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <!-- Havoc Banner Version Style -->
+    <style name="HavocBannerVersion" parent="TextAppearance.SettingsLib.BodyMedium">
+        <item name="android:textColor">@color/havoc_banner_subtitle</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <!-- Havoc Banner Status Style -->
+    <style name="HavocBannerStatus" parent="TextAppearance.SettingsLib.LabelSmall">
+        <item name="android:textColor">@color/havoc_banner_accent</item>
+    </style>
+
+    <!-- Progress Label Style -->
+    <style name="ProgressLabel" parent="TextAppearance.SettingsLib.LabelSmall">
+        <item name="android:textColor">@color/device_info_summary</item>
+        <item name="android:letterSpacing">0.02</item>
     </style>
 
 </resources>
