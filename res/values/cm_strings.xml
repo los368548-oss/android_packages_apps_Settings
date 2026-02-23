@@ -191,4 +191,13 @@
     <string name="battery_maximum_capacity">Maximum capacity</string>
     <string name="battery_maximum_capacity_summary">%1$d mAh (%2$d%%)</string>
     <string name="battery_maximum_capacity_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+
+    <!-- Google Account Tile -->
+    <string name="google_account_tile_title">Google Account</string>
+    <string name="google_account_tile_summary">Manage your Google account</string>
+    <string name="google_account_tile_no_account">No Google account</string>
+    <string name="google_account_tile_add_account">Add Google account</string>
+    <string name="google_account_avatar_content_description">Account avatar</string>
+    <string name="google_account_switcher_description">Switch account</string>
+    <string name="google_account_multiple_accounts">%1$d Google accounts</string>
 </resources>

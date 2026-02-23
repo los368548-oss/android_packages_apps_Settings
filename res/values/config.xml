@@ -46,6 +46,10 @@
     <string name="config_avatar_picker_package" translatable="false">
         com.android.avatarpicker
     </string>
+    <!-- Account provider authority for avatar loading -->
+    <string name="config_account_provider_authority" translatable="false">
+        com.google.android.gms.settings.account
+    </string>
 
     <!-- Package name and fully-qualified class name for the wallpaper picker activity. -->
     <string name="config_wallpaper_picker_package" translatable="false">com.android.settings</string>
