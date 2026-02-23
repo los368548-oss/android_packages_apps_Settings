@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   Copyright (C) 2019 The Android Open Source Project
+  Copyright (C) 2025 The HavocOOS Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,17 +16,25 @@
   limitations under the License.
   -->
 
+<!-- HavocOOS: Enhanced Glassmorphic card preference layout with ripple -->
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="8dp"
-    android:layout_marginStart="24dp"
-    android:layout_marginEnd="16dp"
-    android:foreground="@drawable/contextual_card_background"
+    android:layout_marginVertical="@dimen/havoc_preference_margin_vertical"
+    android:layout_marginStart="@dimen/havoc_preference_margin_horizontal"
+    android:layout_marginEnd="@dimen/havoc_preference_margin_horizontal"
     android:clickable="true"
-    style="@style/ContextualCardStyle">
+    android:focusable="true"
+    style="@style/HavocOOSCardStyle">
+
+    <!-- Glassmorphic background layer -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/glassmorphic_selector"/>
 
     <include
         android:layout_width="match_parent"

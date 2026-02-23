@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<resources>
+
+    <!-- HavocOOS Enhanced Glassmorphic Color Palette -->
+    
+    <!-- Light Mode Glassmorphic Colors -->
+    <!-- Primary glass surface colors -->
+    <color name="glassmorphic_surface_light">#35FFFFFF</color>
+    <color name="glassmorphic_surface_medium">#40FFFFFF</color>
+    <color name="glassmorphic_surface_strong">#50FFFFFF</color>
+    
+    <!-- Gradient colors for depth -->
+    <color name="glassmorphic_gradient_start">#15FFFFFF</color>
+    <color name="glassmorphic_gradient_center">#08FFFFFF</color>
+    <color name="glassmorphic_gradient_end">#03FFFFFF</color>
+    
+    <!-- Highlight colors for glass reflection -->
+    <color name="glassmorphic_highlight_top">#40FFFFFF</color>
+    <color name="glassmorphic_highlight_shimmer">#50FFFFFF</color>
+    
+    <!-- Border colors -->
+    <color name="glassmorphic_border_primary">#45FFFFFF</color>
+    <color name="glassmorphic_border_outer">#15FFFFFF</color>
+    <color name="glassmorphic_border_glow">#20FFFFFF</color>
+    
+    <!-- Ripple colors -->
+    <color name="glassmorphic_ripple_light">#30FFFFFF</color>
+    <color name="glassmorphic_ripple_medium">#25FFFFFF</color>
+    
+    <!-- Dark Mode Glassmorphic Colors -->
+    <!-- Primary glass surface colors -->
+    <color name="glassmorphic_surface_dark">#28000000</color>
+    <color name="glassmorphic_surface_dark_medium">#30000000</color>
+    <color name="glassmorphic_surface_dark_strong">#38000000</color>
+    
+    <!-- Gradient colors for depth (dark mode) -->
+    <color name="glassmorphic_gradient_dark_start">#20000000</color>
+    <color name="glassmorphic_gradient_dark_center">#10000000</color>
+    <color name="glassmorphic_gradient_dark_end">#05000000</color>
+    
+    <!-- Highlight colors for glass reflection (dark mode) -->
+    <color name="glassmorphic_highlight_dark_top">#18FFFFFF</color>
+    <color name="glassmorphic_highlight_dark_shimmer">#25FFFFFF</color>
+    
+    <!-- Border colors (dark mode) -->
+    <color name="glassmorphic_border_dark_primary">#18FFFFFF</color>
+    <color name="glassmorphic_border_dark_outer">#08FFFFFF</color>
+    <color name="glassmorphic_border_dark_glow">#10FFFFFF</color>
+    
+    <!-- Ripple colors (dark mode) -->
+    <color name="glassmorphic_ripple_dark">#20FFFFFF</color>
+    <color name="glassmorphic_ripple_dark_medium">#15FFFFFF</color>
+    
+    <!-- Accent Tint Colors -->
+    <color name="glassmorphic_accent_primary">#FF8A65</color>
+    <color name="glassmorphic_accent_surface">#25FF8A65</color>
+    <color name="glassmorphic_accent_gradient_start">#10FF8A65</color>
+    <color name="glassmorphic_accent_border">#35FF8A65</color>
+    
+    <!-- Premium Shimmer Colors -->
+    <color name="glassmorphic_shimmer_surface">#38FFFFFF</color>
+    <color name="glassmorphic_shimmer_highlight">#55FFFFFF</color>
+    <color name="glassmorphic_shimmer_border">#50FFFFFF</color>
+    
+    <!-- Premium Shimmer Colors (Dark Mode) -->
+    <color name="glassmorphic_shimmer_dark_surface">#30000000</color>
+    <color name="glassmorphic_shimmer_dark_highlight">#22FFFFFF</color>
+    <color name="glassmorphic_shimmer_dark_border">#22FFFFFF</color>
+
+</resources>

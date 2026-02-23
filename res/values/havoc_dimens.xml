@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<resources>
+
+    <!-- HavocOOS Enhanced Glassmorphic Design Dimensions -->
+    
+    <!-- Reduced homepage preference height (from 88sp to 64sp) -->
+    <dimen name="homepage_preference_min_height">64sp</dimen>
+    
+    <!-- Reduced expressive preference height (from 72dp to 56dp) -->
+    <dimen name="havoc_preference_min_height">56dp</dimen>
+    
+    <!-- Glassmorphic card margins -->
+    <dimen name="havoc_preference_margin_horizontal">12dp</dimen>
+    <dimen name="havoc_preference_margin_vertical">3dp</dimen>
+    
+    <!-- Glassmorphic corner radius (Material 3 Expressive) -->
+    <dimen name="havoc_corner_radius">28dp</dimen>
+    
+    <!-- Enhanced corner radius for cards -->
+    <dimen name="havoc_card_corner_radius">24dp</dimen>
+    
+    <!-- Reduced icon sizes for compact layout -->
+    <dimen name="havoc_icon_size">36dp</dimen>
+    
+    <!-- Account avatar dimensions -->
+    <dimen name="havoc_avatar_size">40dp</dimen>
+    <dimen name="havoc_avatar_corner_radius">20dp</dimen>
+    
+    <!-- Glassmorphic border widths -->
+    <dimen name="havoc_border_width_thin">0.5dp</dimen>
+    <dimen name="havoc_border_width_normal">1.5dp</dimen>
+    <dimen name="havoc_border_width_thick">2dp</dimen>
+    
+    <!-- Glassmorphic elevation/shadow simulation -->
+    <dimen name="havoc_elevation_low">2dp</dimen>
+    <dimen name="havoc_elevation_medium">4dp</dimen>
+    <dimen name="havoc_elevation_high">8dp</dimen>
+    
+    <!-- Glassmorphic padding values -->
+    <dimen name="havoc_padding_compact">8dp</dimen>
+    <dimen name="havoc_padding_normal">12dp</dimen>
+    <dimen name="havoc_padding_relaxed">16dp</dimen>
+    
+    <!-- Glassmorphic icon container dimensions -->
+    <dimen name="havoc_icon_container_min_width">36dp</dimen>
+    <dimen name="havoc_icon_container_min_height">36dp</dimen>
+    
+    <!-- Premium shimmer effect dimensions -->
+    <dimen name="havoc_shimmer_stroke_width">1dp</dimen>
+    <dimen name="havoc_shimmer_highlight_width">2dp</dimen>
+
+</resources>

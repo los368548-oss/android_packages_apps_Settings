@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   Copyright (C) 2016 The Android Open Source Project
+  Copyright (C) 2025 The HavocOOS Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -25,6 +26,13 @@
         <item name="seekBarPreferenceStyle">@style/SettingsSeekBarPreference</item>
         <item name="twoStateButtonPreferenceStyle">@style/TwoStateButtonPreference</item>
         <item name="preferenceFragmentCompatStyle">@style/SettingsPreferenceFragmentStyle</item>
+        <!-- HavocOOS: Glassmorphic preference styles -->
+        <item name="preferenceStyle">@style/HavocOOS.Preference</item>
+        <item name="preferenceCategoryStyle">@style/HavocOOS.PreferenceCategory</item>
+        <item name="switchPreferenceStyle">@style/HavocOOS.SwitchPreference</item>
+        <item name="checkBoxPreferenceStyle">@style/HavocOOS.CheckBoxPreference</item>
+        <item name="editTextPreferenceStyle">@style/HavocOOS.EditTextPreference</item>
+        <item name="dialogPreferenceStyle">@style/HavocOOS.DialogPreference</item>
     </style>
 
     <style name="PreferenceTheme.SetupWizard" parent="@style/SettingsPreferenceTheme">
@@ -33,10 +41,12 @@
 
     <style name="CardPreference" parent="@style/Preference.Material">
         <item name="android:layout">@layout/card_preference_layout</item>
+        <item name="android:background">@drawable/glassmorphic_bg</item>
     </style>
 
     <style name="SlicePreference" parent="@style/Preference.Material">
         <item name="android:layout">@layout/slice_preference_layout</item>
+        <item name="android:background">@drawable/glassmorphic_bg</item>
     </style>
 
     <style name="SettingsSeekBarPreference" parent="@style/Preference.Material">
@@ -68,6 +78,83 @@
 
     <style name="VpnAppManagementPreferenceStyle" parent="@style/PreferenceFragment.Material">
         <item name="layout">@layout/vpn_app_management_preference</item>
+    </style>
+
+    <!-- HavocOOS Glassmorphic Preference Styles -->
+    <style name="HavocOOS.Preference" parent="@style/Preference.Material">
+        <item name="android:background">@drawable/glassmorphic_bg</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">false</item>
+    </style>
+
+    <style name="HavocOOS.PreferenceCategory" parent="@style/Preference.Material.PreferenceCategory">
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="allowDividerAbove">false</item>
+    </style>
+
+    <style name="HavocOOS.SwitchPreference" parent="@style/Preference.SwitchPreference.Material">
+        <item name="android:background">@drawable/glassmorphic_bg</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">false</item>
+    </style>
+
+    <style name="HavocOOS.CheckBoxPreference" parent="@style/Preference.CheckBoxPreference.Material">
+        <item name="android:background">@drawable/glassmorphic_bg</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">false</item>
+    </style>
+
+    <style name="HavocOOS.EditTextPreference" parent="@style/Preference.DialogPreference.EditTextPreference.Material">
+        <item name="android:background">@drawable/glassmorphic_bg</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">false</item>
+    </style>
+
+    <style name="HavocOOS.DialogPreference" parent="@style/Preference.DialogPreference.Material">
+        <item name="android:background">@drawable/glassmorphic_bg</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">false</item>
+    </style>
+
+    <style name="HavocOOS.DropDownPreference" parent="@style/Preference.DropDown.Material">
+        <item name="android:background">@drawable/glassmorphic_bg</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">false</item>
+    </style>
+
+    <style name="HavocOOS.SeekBarPreference" parent="@style/Preference.SeekBarPreference.Material">
+        <item name="android:background">@drawable/glassmorphic_bg</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="allowDividerAbove">false</item>
+        <item name="allowDividerBelow">false</item>
     </style>
 
 </resources>
