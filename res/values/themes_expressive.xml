@@ -33,7 +33,7 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:datePickerDialogTheme">@style/PickerDialogTheme.Settings</item>
         <!-- HavocOOS: Glassmorphic preference background -->
-        <item name="preferenceBackgroundColor">@drawable/glassmorphic_bg</item>
+        <item name="preferenceBackgroundColor">@drawable/glassmorphic_selector</item>
 
         <item name="fingerprint_layout_theme">@style/FingerprintLayoutTheme</item>
         <item name="face_layout_theme">@style/FaceLayoutTheme</item>
@@ -53,8 +53,6 @@
 
         <!-- Redefine the ActionBar style for contentInsetStart -->
         <item name="android:actionBarStyle">@style/Widget.ActionBar</item>
-
-        <item name="preferenceBackgroundColor">@drawable/preference_background</item>
 
         <!-- For AndroidX AlertDialog -->
         <item name="alertDialogTheme">@style/Theme.AlertDialog.SettingsLib.Expressive</item>
