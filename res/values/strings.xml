@@ -3711,6 +3711,38 @@
     <string name="battery_cycle_count">Cycle count</string>
     <!-- About phone, status item title. The status summary for cycle count that's not available. [CHAR LIMIT=40] -->
     <string name="battery_cycle_count_not_available">Unavailable</string>
+    <!-- Battery Health Dashboard strings -->
+    <!-- Title for battery health dashboard [CHAR LIMIT=40] -->
+    <string name="battery_health_dashboard_title">Battery Health</string>
+    <!-- Summary for battery health dashboard [CHAR LIMIT=NONE] -->
+    <string name="battery_health_dashboard_summary">Monitor battery condition and optimize lifespan</string>
+    <!-- Battery health status: Good [CHAR LIMIT=20] -->
+    <string name="battery_health_status_good">Good</string>
+    <!-- Battery health status: Fair [CHAR LIMIT=20] -->
+    <string name="battery_health_status_fair">Fair</string>
+    <!-- Battery health status: Poor [CHAR LIMIT=20] -->
+    <string name="battery_health_status_poor">Poor</string>
+    <!-- Battery health status: Unknown [CHAR LIMIT=20] -->
+    <string name="battery_health_status_unknown">Unknown</string>
+    <!-- Battery capacity degradation label [CHAR LIMIT=40] -->
+    <string name="battery_capacity_degradation">Capacity degradation</string>
+    <!-- Battery temperature label [CHAR LIMIT=40] -->
+    <string name="battery_temperature_current">Current temperature</string>
+    <!-- Battery health recommendation: Good [CHAR LIMIT=NONE] -->
+    <string name="battery_health_recommendation_good">Your battery is in excellent condition. Continue normal usage.</string>
+    <!-- Battery health recommendation: Fair [CHAR LIMIT=NONE] -->
+    <string name="battery_health_recommendation_fair">Battery health is declining. Consider reducing fast charging and avoid extreme temperatures.</string>
+    <!-- Battery health recommendation: Poor [CHAR LIMIT=NONE] -->
+    <string name="battery_health_recommendation_poor">Battery health is significantly degraded. Consider replacing the battery for optimal performance.</string>
+    <!-- Battery health cycle count format [CHAR LIMIT=NONE] -->
+    <string name="battery_health_cycle_count_format"><xliff:g id="count">%1$d</xliff:g> cycles</string>
+    <!-- Battery health temperature format [CHAR LIMIT=NONE] -->
+    <string name="battery_health_temperature_format"><xliff:g id="temp">%1$.1f</xliff:g>°C</string>
+    <!-- Battery health capacity format [CHAR LIMIT=NONE] -->
+    <string name="battery_health_capacity_format"><xliff:g id="percent">%1$d</xliff:g>%% of original capacity</string>
+    <!-- Battery health degradation format [CHAR LIMIT=NONE] -->
+    <string name="battery_health_degradation_format"><xliff:g id="percent">%1$d</xliff:g>%% degraded</string>
+
 
     <!-- SD card & phone storage settings summary. Displayed when the total memory usage is being calculated. Will be replaced with a number like "12.3 GB" when finished calucating. [CHAR LIMIT=30] -->
     <string name="memory_calculating_size">Calculating\u2026</string>
