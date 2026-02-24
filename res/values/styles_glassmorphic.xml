@@ -37,7 +37,7 @@
     <!-- Device Info Title Style -->
     <style name="DeviceInfoTitle" parent="TextAppearance.SettingsLib.BodyLarge">
         <item name="android:textColor">@color/device_info_title</item>
-        <item name="android:textStyle">medium</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:letterSpacing">0.01</item>
     </style>
 

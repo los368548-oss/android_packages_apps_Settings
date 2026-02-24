@@ -67,7 +67,7 @@
         <item name="allowDividerBelow">false</item>
     </style>
 
-    <style name="HavocOOS.PreferenceCategory.Expressive" parent="@style/Preference.Material.PreferenceCategory">
+    <style name="HavocOOS.PreferenceCategory.Expressive" parent="@style/Preference.Category.Material">
         <item name="android:layout_marginTop">14dp</item>
         <item name="android:layout_marginBottom">6dp</item>
         <item name="android:layout_marginStart">@dimen/havoc_preference_margin_horizontal</item>
