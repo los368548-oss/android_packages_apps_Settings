@@ -199,7 +199,7 @@ public class SmartNotificationRanker {
 
     private float getChannelImportanceScore(@NonNull StatusBarNotification sbn) {
         final NotificationChannel channel = mNotificationManager.getNotificationChannel(
-                sbn.getPackageName(), sbn.getUser().getIdentifier(), sbn.getNotification().getChannelId());
+                sbn.getPackageName(), sbn.getNotification().getChannelId());
 
         if (channel == null) {
             return 0.5f;
@@ -222,7 +222,7 @@ public class SmartNotificationRanker {
     private float getTimeSensitivityScore(@NonNull StatusBarNotification sbn) {
         // Check if notification has time-sensitive content
         final long when = sbn.getNotification().when;
-        final long timeoutAfter = sbn.getNotification().timeoutAfter;
+        final long timeoutAfter = sbn.getNotification().getTimeoutAfter();
 
         // Notifications with specific timing are more important
         if (when > 0) {
