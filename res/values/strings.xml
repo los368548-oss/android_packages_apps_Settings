@@ -3887,6 +3887,47 @@
     <!-- Recommendation: Low storage description [CHAR LIMIT=NONE] -->
     <string name="storage_recommendation_low_desc">Consider freeing up some space</string>
 
+    <!-- App Hibernation Manager strings -->
+    <!-- Title for app hibernation manager [CHAR LIMIT=40] -->
+    <string name="app_hibernation_title">App Hibernation</string>
+    <!-- Summary for app hibernation manager [CHAR LIMIT=NONE] -->
+    <string name="app_hibernation_summary">Put unused apps to sleep to save battery and resources</string>
+    <!-- Hibernation eligibility: Unused [CHAR LIMIT=30] -->
+    <string name="hibernation_eligibility_unused">Unused</string>
+    <!-- Hibernation eligibility: Rarely used [CHAR LIMIT=30] -->
+    <string name="hibernation_eligibility_rarely_used">Rarely used</string>
+    <!-- Hibernation eligibility: Low usage [CHAR LIMIT=30] -->
+    <string name="hibernation_eligibility_low_usage">Low usage</string>
+    <!-- Hibernation eligibility: Background restrict [CHAR LIMIT=30] -->
+    <string name="hibernation_eligibility_background">Background activity</string>
+    <!-- Hibernation status: Hibernated [CHAR LIMIT=20] -->
+    <string name="hibernation_status_hibernated">Hibernated</string>
+    <!-- Hibernation status: Active [CHAR LIMIT=20] -->
+    <string name="hibernation_status_active">Active</string>
+    <!-- Hibernation action: Hibernate [CHAR LIMIT=20] -->
+    <string name="hibernation_action_hibernate">Hibernate</string>
+    <!-- Hibernation action: Wake [CHAR LIMIT=20] -->
+    <string name="hibernation_action_wake">Wake up</string>
+    <!-- Hibernation stats format [CHAR LIMIT=NONE] -->
+    <string name="hibernation_stats_format"><xliff:g id="count">%1$d</xliff:g> apps can be hibernated</string>
+    <!-- Hibernation potential savings format [CHAR LIMIT=NONE] -->
+    <string name="hibernation_savings_format">Potential savings: <xliff:g id="size">%1$s</xliff:g></string>
+    <!-- Hibernation last used format [CHAR LIMIT=NONE] -->
+    <string name="hibernation_last_used_format">Last used <xliff:g id="time">%1$s</xliff:g> ago</string>
+    <!-- Hibernation never used [CHAR LIMIT=NONE] -->
+    <string name="hibernation_never_used">Never used</string>
+    <!-- Hibernation usage count format [CHAR LIMIT=NONE] -->
+    <string name="hibernation_usage_count_format">Used <xliff:g id="count">%1$d</xliff:g> times in 30 days</string>
+    <!-- Hibernation section: Unused apps [CHAR LIMIT=40] -->
+    <string name="hibernation_section_unused">Unused Apps</string>
+    <!-- Hibernation section: Rarely used apps [CHAR LIMIT=40] -->
+    <string name="hibernation_section_rarely">Rarely Used Apps</string>
+    <!-- Hibernation section: Low usage apps [CHAR LIMIT=40] -->
+    <string name="hibernation_section_low_usage">Low Usage Apps</string>
+    <!-- Hibernation section: Background activity [CHAR LIMIT=40] -->
+    <string name="hibernation_section_background">Background Activity</string>
+
+
 
 
 
