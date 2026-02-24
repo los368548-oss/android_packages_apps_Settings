@@ -32,6 +32,7 @@ import android.os.UserManager;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -252,13 +253,15 @@ public class AppHibernationManager {
 
     private boolean hasBackgroundActivity(@NonNull String packageName) {
         try {
-            final List<AppOpsManager.OpEntry> ops = mAppOpsManager.getOpsForPackage(
-                    UserHandle.myUserId(), packageName, null);
-            if (ops != null) {
-                for (AppOpsManager.OpEntry op : ops) {
-                    if (op.getOp() == AppOpsManager.OP_RUN_IN_BACKGROUND
-                            || op.getOp() == AppOpsManager.OP_RUN_ANY_IN_BACKGROUND) {
-                        return true;
+            final List<AppOpsManager.PackageOps> packageOps = mAppOpsManager.getOpsForPackage(
+                    UserHandle.myUserId(), packageName, (String[]) null);
+            if (packageOps != null && !packageOps.isEmpty()) {
+                for (AppOpsManager.PackageOps pkgOps : packageOps) {
+                    for (AppOpsManager.OpEntry op : pkgOps.getOps()) {
+                        if (op.getOp() == AppOpsManager.OP_RUN_IN_BACKGROUND
+                                || op.getOp() == AppOpsManager.OP_RUN_ANY_IN_BACKGROUND) {
+                            return true;
+                        }
                     }
                 }
             }
