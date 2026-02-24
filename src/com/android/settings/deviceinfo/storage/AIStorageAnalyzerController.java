@@ -148,19 +148,29 @@ public class AIStorageAnalyzerController extends BasePreferenceController
         for (ApplicationInfo appInfo : installedApps) {
             try {
                 final File dataDir = new File(appInfo.dataDir);
-                final File cacheDir = new File(appInfo.cacheDir);
+                // Use context's cache dir or construct from dataDir
+                final File cacheDir = new File(appInfo.dataDir, "cache");
 
                 final long dataSize = dataDir.exists() ? dataDir.length() : 0;
                 final long cacheSize = cacheDir.exists() ? cacheDir.length() : 0;
 
                 if (dataSize > 0 || cacheSize > 0) {
+                    // Get last update time from PackageInfo
+                    long lastUpdateTime = 0;
+                    try {
+                        lastUpdateTime = mPackageManager.getPackageInfo(
+                                appInfo.packageName, 0).lastUpdateTime;
+                    } catch (Exception e) {
+                        // Use 0 if unavailable
+                    }
+
                     final AppStorageInfo appStorage = new AppStorageInfo(
                             appInfo.packageName,
                             appInfo.loadLabel(mPackageManager).toString(),
                             appInfo.loadIcon(mPackageManager),
                             dataSize,
                             cacheSize,
-                            appInfo.lastUpdateTime
+                            lastUpdateTime
                     );
                     appStorageList.add(appStorage);
                     totalCacheSize += cacheSize;
