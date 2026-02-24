@@ -217,13 +217,15 @@ public class PrivacyDashboardEnhancement {
         }
 
         try {
-            final List<AppOpsManager.OpEntry> ops = mAppOpsManager.getOpsForPackage(
+            final List<AppOpsManager.PackageOps> packageOps = mAppOpsManager.getOpsForPackage(
                     UserHandle.myUserId(), packageName, new String[]{appOp});
 
-            if (ops != null && !ops.isEmpty()) {
+            if (packageOps != null && !packageOps.isEmpty()) {
                 // Check if used in the last 24 hours
                 final long oneDayAgo = System.currentTimeMillis() - 86400000L;
-                return ops.get(0).getLastAccessTime() >= oneDayAgo;
+                for (AppOpsManager.OpEntry op : packageOps.get(0).getOps()) {
+                    return op.getLastAccessTime(0) >= oneDayAgo;
+                }
             }
         } catch (Exception e) {
             // Ignore
@@ -254,17 +256,19 @@ public class PrivacyDashboardEnhancement {
     private boolean checkBackgroundAccess(@NonNull String packageName) {
         try {
             // Check for background location access
-            final List<AppOpsManager.OpEntry> ops = mAppOpsManager.getOpsForPackage(
+            final List<AppOpsManager.PackageOps> packageOps = mAppOpsManager.getOpsForPackage(
                     UserHandle.myUserId(), packageName,
                     new String[]{
-                            AppOpsManager.OPSTR_ACCESS_BACKGROUND_LOCATION,
+                            AppOpsManager.OPSTR_FINE_LOCATION,
                             AppOpsManager.OPSTR_RECORD_AUDIO
                     });
 
-            if (ops != null) {
-                for (AppOpsManager.OpEntry op : ops) {
-                    if (op.getMode() == AppOpsManager.MODE_ALLOWED) {
-                        return true;
+            if (packageOps != null) {
+                for (AppOpsManager.PackageOps pkgOps : packageOps) {
+                    for (AppOpsManager.OpEntry op : pkgOps.getOps()) {
+                        if (op.getMode() == AppOpsManager.MODE_ALLOWED) {
+                            return true;
+                        }
                     }
                 }
             }

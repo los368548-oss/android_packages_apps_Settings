@@ -25,7 +25,6 @@ import android.graphics.drawable.Drawable;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.permission.PermissionManager;
-import android.permission.PermissionManager.PermissionUsageFlag;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
 
@@ -211,13 +210,15 @@ public class PermissionUsageTimelineController extends BasePreferenceController
         }
 
         try {
-            final List<AppOpsManager.OpEntry> ops = mAppOpsManager.getOpsForPackage(
+            final List<AppOpsManager.PackageOps> packageOps = mAppOpsManager.getOpsForPackage(
                     UserHandle.myUserId(), packageName, new String[]{appOp});
 
-            if (ops != null && !ops.isEmpty()) {
-                for (AppOpsManager.OpEntry op : ops) {
-                    if (op.getLastAccessTime() >= startTime) {
-                        return true;
+            if (packageOps != null && !packageOps.isEmpty()) {
+                for (AppOpsManager.PackageOps pkgOps : packageOps) {
+                    for (AppOpsManager.OpEntry op : pkgOps.getOps()) {
+                        if (op.getLastAccessTime(0) >= startTime) {
+                            return true;
+                        }
                     }
                 }
             }
@@ -240,11 +241,13 @@ public class PermissionUsageTimelineController extends BasePreferenceController
         }
 
         try {
-            final List<AppOpsManager.OpEntry> ops = mAppOpsManager.getOpsForPackage(
+            final List<AppOpsManager.PackageOps> packageOps = mAppOpsManager.getOpsForPackage(
                     UserHandle.myUserId(), packageName, new String[]{appOp});
 
-            if (ops != null && !ops.isEmpty()) {
-                return ops.get(0).getLastAccessTime();
+            if (packageOps != null && !packageOps.isEmpty()) {
+                for (AppOpsManager.OpEntry op : packageOps.get(0).getOps()) {
+                    return op.getLastAccessTime(0);
+                }
             }
         } catch (Exception e) {
             // Ignore errors
@@ -260,11 +263,13 @@ public class PermissionUsageTimelineController extends BasePreferenceController
         }
 
         try {
-            final List<AppOpsManager.OpEntry> ops = mAppOpsManager.getOpsForPackage(
+            final List<AppOpsManager.PackageOps> packageOps = mAppOpsManager.getOpsForPackage(
                     UserHandle.myUserId(), packageName, new String[]{appOp});
 
-            if (ops != null && !ops.isEmpty()) {
-                return ops.get(0).getDuration();
+            if (packageOps != null && !packageOps.isEmpty()) {
+                for (AppOpsManager.OpEntry op : packageOps.get(0).getOps()) {
+                    return op.getDuration();
+                }
             }
         } catch (Exception e) {
             // Ignore errors
@@ -281,15 +286,17 @@ public class PermissionUsageTimelineController extends BasePreferenceController
         }
 
         try {
-            final List<AppOpsManager.OpEntry> ops = mAppOpsManager.getOpsForPackage(
+            final List<AppOpsManager.PackageOps> packageOps = mAppOpsManager.getOpsForPackage(
                     UserHandle.myUserId(), packageName, new String[]{appOp});
 
-            if (ops != null && !ops.isEmpty()) {
-                final int mode = ops.get(0).getMode();
-                if (mode == AppOpsManager.MODE_FOREGROUND) {
-                    return AccessType.FOREGROUND;
-                } else if (mode == AppOpsManager.MODE_ALLOWED) {
-                    return AccessType.BACKGROUND;
+            if (packageOps != null && !packageOps.isEmpty()) {
+                for (AppOpsManager.OpEntry op : packageOps.get(0).getOps()) {
+                    final int mode = op.getMode();
+                    if (mode == AppOpsManager.MODE_FOREGROUND) {
+                        return AccessType.FOREGROUND;
+                    } else if (mode == AppOpsManager.MODE_ALLOWED) {
+                        return AccessType.BACKGROUND;
+                    }
                 }
             }
         } catch (Exception e) {
