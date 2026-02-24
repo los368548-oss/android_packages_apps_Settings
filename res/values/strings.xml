@@ -3927,6 +3927,41 @@
     <!-- Hibernation section: Background activity [CHAR LIMIT=40] -->
     <string name="hibernation_section_background">Background Activity</string>
 
+    <!-- Privacy Dashboard Enhancement strings -->
+    <!-- Privacy score format [CHAR LIMIT=NONE] -->
+    <string name="privacy_score_format">Privacy Score: <xliff:g id="score">%1$d</xliff:g>/100</string>
+    <!-- Privacy risk: Low [CHAR LIMIT=20] -->
+    <string name="privacy_risk_low">Low Risk</string>
+    <!-- Privacy risk: Medium [CHAR LIMIT=20] -->
+    <string name="privacy_risk_medium">Medium Risk</string>
+    <!-- Privacy risk: High [CHAR LIMIT=20] -->
+    <string name="privacy_risk_high">High Risk</string>
+    <!-- Privacy risk: Critical [CHAR LIMIT=20] -->
+    <string name="privacy_risk_critical">Critical Risk</string>
+    <!-- Privacy recommendation: Critical app [CHAR LIMIT=NONE] -->
+    <string name="privacy_recommendation_critical_app">Review permissions for <xliff:g id="app">%1$s</xliff:g> - high risk app</string>
+    <!-- Privacy recommendation: Background access [CHAR LIMIT=NONE] -->
+    <string name="privacy_recommendation_background"><xliff:g id="app">%1$s</xliff:g> has background access to sensitive data</string>
+    <!-- Privacy recommendation: Dangerous combination [CHAR LIMIT=NONE] -->
+    <string name="privacy_recommendation_dangerous_combo"><xliff:g id="app">%1$s</xliff:g> has a dangerous permission combination</string>
+    <!-- Privacy recommendation: Unused permissions [CHAR LIMIT=NONE] -->
+    <string name="privacy_recommendation_unused"><xliff:g id="app">%1$s</xliff:g> has <xliff:g id="count">%2$d</xliff:g> unused permissions</string>
+    <!-- Privacy section: High risk apps [CHAR LIMIT=40] -->
+    <string name="privacy_section_high_risk">High Risk Apps</string>
+    <!-- Privacy section: Background access [CHAR LIMIT=40] -->
+    <string name="privacy_section_background_access">Background Access</string>
+    <!-- Privacy section: Recent access [CHAR LIMIT=40] -->
+    <string name="privacy_section_recent_access">Recent Access</string>
+    <!-- Privacy alert: Camera access [CHAR LIMIT=NONE] -->
+    <string name="privacy_alert_camera"><xliff:g id="app">%1$s</xliff:g> recently accessed camera</string>
+    <!-- Privacy alert: Microphone access [CHAR LIMIT=NONE] -->
+    <string name="privacy_alert_microphone"><xliff:g id="app">%1$s</xliff:g> recently accessed microphone</string>
+    <!-- Privacy alert: Location access [CHAR LIMIT=NONE] -->
+    <string name="privacy_alert_location"><xliff:g id="app">%1$s</xliff:g> recently accessed location</string>
+    <!-- Privacy permission count format [CHAR LIMIT=NONE] -->
+    <string name="privacy_permission_count_format"><xliff:g id="count">%1$d</xliff:g> apps have this permission</string>
+
+
 
 
 
