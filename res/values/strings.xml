@@ -3821,6 +3821,73 @@
     <!-- Permission access: Background [CHAR LIMIT=20] -->
     <string name="permission_access_background"> (background)</string>
 
+    <!-- AI Storage Analyzer strings -->
+    <!-- Title for AI storage analyzer [CHAR LIMIT=40] -->
+    <string name="ai_storage_analyzer_title">Storage Analysis</string>
+    <!-- Storage health title [CHAR LIMIT=40] -->
+    <string name="storage_health_title">Storage Health</string>
+    <!-- Storage health format [CHAR LIMIT=NONE] -->
+    <string name="storage_health_format"><xliff:g id="status">%1$s</xliff:g> • <xliff:g id="available">%2$s</xliff:g> available</string>
+    <!-- Storage health: Good [CHAR LIMIT=20] -->
+    <string name="storage_health_good">Good</string>
+    <!-- Storage health: Warning [CHAR LIMIT=20] -->
+    <string name="storage_health_warning">Warning</string>
+    <!-- Storage health: Low [CHAR LIMIT=20] -->
+    <string name="storage_health_low">Low</string>
+    <!-- Storage health: Critical [CHAR LIMIT=20] -->
+    <string name="storage_health_critical">Critical</string>
+    <!-- Storage health good summary [CHAR LIMIT=NONE] -->
+    <string name="storage_health_good_summary">Your storage is in good condition</string>
+    <!-- Storage health warning summary [CHAR LIMIT=NONE] -->
+    <string name="storage_health_warning_summary">Storage is getting full. Consider cleaning up.</string>
+    <!-- Storage health low summary [CHAR LIMIT=NONE] -->
+    <string name="storage_health_low_summary">Storage is low. Free up space soon.</string>
+    <!-- Storage health critical summary [CHAR LIMIT=NONE] -->
+    <string name="storage_health_critical_summary">Storage critically low. Free up space immediately.</string>
+    <!-- Storage categories title [CHAR LIMIT=40] -->
+    <string name="storage_categories_title">Storage Categories</string>
+    <!-- Storage category: Images [CHAR LIMIT=20] -->
+    <string name="storage_category_images">Images</string>
+    <!-- Storage category: Videos [CHAR LIMIT=20] -->
+    <string name="storage_category_videos">Videos</string>
+    <!-- Storage category: Audio [CHAR LIMIT=20] -->
+    <string name="storage_category_audio">Audio</string>
+    <!-- Storage category: Documents [CHAR LIMIT=20] -->
+    <string name="storage_category_documents">Documents</string>
+    <!-- Storage category: Archives [CHAR LIMIT=20] -->
+    <string name="storage_category_archives">Archives</string>
+    <!-- Storage category: APK files [CHAR LIMIT=20] -->
+    <string name="storage_category_apk">APK Files</string>
+    <!-- Storage category: Cache [CHAR LIMIT=20] -->
+    <string name="storage_category_cache">Cache</string>
+    <!-- Storage category: Other [CHAR LIMIT=20] -->
+    <string name="storage_category_other">Other</string>
+    <!-- Recommendation: Clear cache [CHAR LIMIT=40] -->
+    <string name="storage_recommendation_clear_cache">Clear App Cache</string>
+    <!-- Recommendation: Clear cache description [CHAR LIMIT=NONE] -->
+    <string name="storage_recommendation_clear_cache_desc">Free up <xliff:g id="size">%1$s</xliff:g> by clearing app cache</string>
+    <!-- Recommendation: Clear old files [CHAR LIMIT=40] -->
+    <string name="storage_recommendation_old_files">Remove Old Files</string>
+    <!-- Recommendation: Clear old files description [CHAR LIMIT=NONE] -->
+    <string name="storage_recommendation_old_files_desc">Free up <xliff:g id="size">%1$s</xliff:g> by removing files older than 90 days</string>
+    <!-- Recommendation: Clear APK files [CHAR LIMIT=40] -->
+    <string name="storage_recommendation_apk_files">Remove APK Files</string>
+    <!-- Recommendation: Clear APK files description [CHAR LIMIT=NONE] -->
+    <string name="storage_recommendation_apk_files_desc">Free up <xliff:g id="size">%1$s</xliff:g> by removing downloaded APK files</string>
+    <!-- Recommendation: Review large apps [CHAR LIMIT=40] -->
+    <string name="storage_recommendation_large_apps">Review Large Apps</string>
+    <!-- Recommendation: Review large apps description [CHAR LIMIT=NONE] -->
+    <string name="storage_recommendation_large_apps_desc"><xliff:g id="count">%1$d</xliff:g> apps using significant storage</string>
+    <!-- Recommendation: Critical storage [CHAR LIMIT=40] -->
+    <string name="storage_recommendation_critical">Storage Critical</string>
+    <!-- Recommendation: Critical storage description [CHAR LIMIT=NONE] -->
+    <string name="storage_recommendation_critical_desc">Free up space immediately to prevent issues</string>
+    <!-- Recommendation: Low storage [CHAR LIMIT=40] -->
+    <string name="storage_recommendation_low">Storage Low</string>
+    <!-- Recommendation: Low storage description [CHAR LIMIT=NONE] -->
+    <string name="storage_recommendation_low_desc">Consider freeing up some space</string>
+
+
 
 
 
