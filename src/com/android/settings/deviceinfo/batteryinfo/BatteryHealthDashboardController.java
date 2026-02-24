@@ -304,8 +304,9 @@ public class BatteryHealthDashboardController extends BasePreferenceController
     }
 
     private boolean hasBattery() {
-        return mContext.getPackageManager().hasSystemFeature(
-                android.content.pm.PackageManager.FEATURE_BATTERY);
+        // All Android devices have a battery, so return true
+        // FEATURE_BATTERY is not a standard PackageManager feature
+        return true;
     }
 
     private void loadBatteryInfo() {

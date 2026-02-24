@@ -3742,6 +3742,46 @@
     <string name="battery_health_capacity_format"><xliff:g id="percent">%1$d</xliff:g>%% of original capacity</string>
     <!-- Battery health degradation format [CHAR LIMIT=NONE] -->
     <string name="battery_health_degradation_format"><xliff:g id="percent">%1$d</xliff:g>%% degraded</string>
+    <!-- Battery health calculating [CHAR LIMIT=40] -->
+    <string name="battery_health_calculating">Calculating...</string>
+    <!-- Battery health summary format [CHAR LIMIT=NONE] -->
+    <string name="battery_health_summary"><xliff:g id="percent">%1$d</xliff:g>%% - <xliff:g id="status">%2$s</xliff:g></string>
+    <!-- Battery health status: Excellent [CHAR LIMIT=20] -->
+    <string name="battery_health_status_excellent">Excellent</string>
+    <!-- Battery health status: Replace [CHAR LIMIT=20] -->
+    <string name="battery_health_status_replace">Replace</string>
+    <!-- Battery charge speed: Super Fast [CHAR LIMIT=30] -->
+    <string name="battery_charge_speed_super_fast">Super Fast Charging</string>
+    <!-- Battery charge speed: Fast [CHAR LIMIT=30] -->
+    <string name="battery_charge_speed_fast">Fast Charging</string>
+    <!-- Battery charge speed: Normal [CHAR LIMIT=30] -->
+    <string name="battery_charge_speed_normal">Normal Charging</string>
+    <!-- Battery charge speed: Slow [CHAR LIMIT=30] -->
+    <string name="battery_charge_speed_slow">Slow Charging</string>
+    <!-- Battery charge speed: None [CHAR LIMIT=30] -->
+    <string name="battery_charge_speed_none">Not Charging</string>
+    <!-- Battery recommendation: Replace [CHAR LIMIT=NONE] -->
+    <string name="battery_recommend_replace">Battery health is degraded. Consider replacing the battery.</string>
+    <!-- Battery recommendation: Temperature [CHAR LIMIT=NONE] -->
+    <string name="battery_recommend_temperature">Battery temperature is high. Avoid using device in hot environments.</string>
+    <!-- Battery recommendation: Fast charge [CHAR LIMIT=NONE] -->
+    <string name="battery_recommend_fast_charge">Fast charging generates heat. Consider using standard charging for better battery health.</string>
+    <!-- Battery recommendation: Good [CHAR LIMIT=NONE] -->
+    <string name="battery_recommend_good">Battery is in good condition. No action needed.</string>
+    <!-- Battery recommendation: Cycle limit [CHAR LIMIT=NONE] -->
+    <string name="battery_recommend_cycle_limit">Battery has high cycle count. Consider replacing for optimal performance.</string>
+    <!-- Battery life: Unknown [CHAR LIMIT=30] -->
+    <string name="battery_life_unknown">Unknown</string>
+    <!-- Battery life: Excellent [CHAR LIMIT=30] -->
+    <string name="battery_life_excellent">2+ years</string>
+    <!-- Battery life: Good [CHAR LIMIT=30] -->
+    <string name="battery_life_good">1-2 years</string>
+    <!-- Battery life: Fair [CHAR LIMIT=30] -->
+    <string name="battery_life_fair">6-12 months</string>
+    <!-- Battery life: Poor [CHAR LIMIT=30] -->
+    <string name="battery_life_poor">Less than 6 months</string>
+    <!-- Battery life: Replace [CHAR LIMIT=30] -->
+    <string name="battery_life_replace">Replace soon</string>
 
     <!-- Network Speed Monitor strings -->
     <!-- Title for network speed monitor [CHAR LIMIT=40] -->

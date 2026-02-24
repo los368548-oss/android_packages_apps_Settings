@@ -18,6 +18,7 @@ package com.android.settings.deviceinfo.aboutphone;
 
 import android.content.Context;
 import android.os.BatteryManager;
+import android.os.SystemProperties;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;

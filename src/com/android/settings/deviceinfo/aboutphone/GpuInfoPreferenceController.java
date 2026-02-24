@@ -33,6 +33,7 @@ import javax.microedition.khronos.egl.EGL10;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.egl.EGLContext;
 import javax.microedition.khronos.egl.EGLDisplay;
+import javax.microedition.khronos.egl.EGLSurface;
 
 /**
  * Controller for displaying GPU information.
@@ -158,7 +159,7 @@ public class GpuInfoPreferenceController extends BasePreferenceController {
                 EGL10.EGL_NONE
             };
             
-            android.opengl.EGLSurface surface = egl.eglCreatePbufferSurface(display, 
+            EGLSurface surface = egl.eglCreatePbufferSurface(display, 
                     configs[0], surfaceAttribs);
             
             egl.eglMakeCurrent(display, surface, surface, context);
