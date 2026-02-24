@@ -3779,6 +3779,49 @@
     <!-- Network data usage summary [CHAR LIMIT=NONE] -->
     <string name="network_data_usage_summary">Downloaded: <xliff:g id="download">%1$s</xliff:g> • Uploaded: <xliff:g id="upload">%2$s</xliff:g></string>
 
+    <!-- Permission Usage Timeline strings -->
+    <!-- Title for permission usage timeline [CHAR LIMIT=40] -->
+    <string name="permission_usage_timeline_title">Permission Usage</string>
+    <!-- Summary when no recent permission access [CHAR LIMIT=NONE] -->
+    <string name="permission_usage_no_recent_access">No recent permission access</string>
+    <!-- Title for permission usage in last hour [CHAR LIMIT=40] -->
+    <string name="permission_usage_last_hour">Last hour</string>
+    <!-- Title for older permission usage [CHAR LIMIT=40] -->
+    <string name="permission_usage_older">Older</string>
+    <!-- Permission usage event summary format [CHAR LIMIT=NONE] -->
+    <string name="permission_usage_event_summary"><xliff:g id="permission">%1$s</xliff:g> • <xliff:g id="time">%2$s</xliff:g><xliff:g id="access_type">%3$s</xliff:g></string>
+    <!-- Permission usage: just now [CHAR LIMIT=20] -->
+    <string name="permission_usage_just_now">Just now</string>
+    <!-- Permission usage: minutes ago [CHAR LIMIT=20] -->
+    <string name="permission_usage_minutes_ago"><xliff:g id="count">%1$d</xliff:g> min ago</string>
+    <!-- Permission usage: hours ago [CHAR LIMIT=20] -->
+    <string name="permission_usage_hours_ago"><xliff:g id="count">%1$d</xliff:g> hr ago</string>
+    <!-- Permission group: Location [CHAR LIMIT=30] -->
+    <string name="permission_group_location">Location</string>
+    <!-- Permission group: Camera [CHAR LIMIT=30] -->
+    <string name="permission_group_camera">Camera</string>
+    <!-- Permission group: Microphone [CHAR LIMIT=30] -->
+    <string name="permission_group_microphone">Microphone</string>
+    <!-- Permission group: Contacts [CHAR LIMIT=30] -->
+    <string name="permission_group_contacts">Contacts</string>
+    <!-- Permission group: Calendar [CHAR LIMIT=30] -->
+    <string name="permission_group_calendar">Calendar</string>
+    <!-- Permission group: Call log [CHAR LIMIT=30] -->
+    <string name="permission_group_call_log">Call log</string>
+    <!-- Permission group: Phone [CHAR LIMIT=30] -->
+    <string name="permission_group_phone">Phone</string>
+    <!-- Permission group: Sensors [CHAR LIMIT=30] -->
+    <string name="permission_group_sensors">Sensors</string>
+    <!-- Permission group: Activity [CHAR LIMIT=30] -->
+    <string name="permission_group_activity">Activity</string>
+    <!-- Permission group: Other [CHAR LIMIT=30] -->
+    <string name="permission_group_other">Other</string>
+    <!-- Permission access: Foreground [CHAR LIMIT=20] -->
+    <string name="permission_access_foreground"> (foreground)</string>
+    <!-- Permission access: Background [CHAR LIMIT=20] -->
+    <string name="permission_access_background"> (background)</string>
+
+
 
 
     <!-- SD card & phone storage settings summary. Displayed when the total memory usage is being calculated. Will be replaced with a number like "12.3 GB" when finished calucating. [CHAR LIMIT=30] -->
