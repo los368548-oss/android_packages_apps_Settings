@@ -842,6 +842,26 @@ public class AIStorageAnalyzerController extends BasePreferenceController
                 return this;
             }
 
+            public long getTotalCacheSize() {
+                return mTotalCacheSize;
+            }
+
+            public Map<FileCategory, Long> getCategorySizes() {
+                return mCategorySizes;
+            }
+
+            public List<AppStorageInfo> getLargeApps() {
+                return mLargeApps;
+            }
+
+            public StorageHealth getStorageHealth() {
+                return mStorageHealth;
+            }
+
+            public long getAvailableStorage() {
+                return mAvailableStorage;
+            }
+
             public StorageAnalysisResult build() {
                 return new StorageAnalysisResult(this);
             }
