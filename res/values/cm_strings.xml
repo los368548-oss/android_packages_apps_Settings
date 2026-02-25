@@ -52,12 +52,47 @@
     <string name="up_to_date">System is up to date</string>
     <string name="update_available">Update available</string>
 
+    <!-- Device Info Category Titles -->
+    <string name="device_info_overview_category_title">Device Overview</string>
+    <string name="device_info_hardware_category_title">Hardware Info</string>
+    
     <!-- Device Info Card strings -->
     <string name="camera_info_title">Camera</string>
     <string name="camera_info_default">Not available</string>
     <string name="processor_info_title">Processor</string>
     <string name="storage_info_title">Storage</string>
     <string name="storage_summary_format">%1$s used of %2$s \u2022 %3$s free</string>
+    
+    <!-- Hardware Grid Tile Labels -->
+    <string name="processor_label">Processor</string>
+    <string name="ram_label">RAM</string>
+    <string name="battery_label">Battery</string>
+    <string name="display_label">Display</string>
+    <string name="camera_label">Camera</string>
+    <string name="gpu_label">GPU</string>
+    
+    <!-- Software Grid Tile Labels -->
+    <string name="sim_status_label">SIM Status</string>
+    <string name="phone_number_label">Phone Number</string>
+    <string name="model_label">Model</string>
+    <string name="imei_label">IMEI</string>
+    
+    <!-- Network Grid Tile Labels -->
+    <string name="wifi_mac_label">Wi-Fi MAC</string>
+    <string name="bluetooth_mac_label">Bluetooth MAC</string>
+    <string name="uptime_label">Uptime</string>
+    <string name="build_number_label">Build Number</string>
+    
+    <!-- Quick Links Labels -->
+    <string name="manual_label">Manual</string>
+    <string name="feedback_label">Feedback</string>
+    <string name="legal_label">Legal</string>
+    <string name="regulatory_label">Regulatory</string>
+    
+    <!-- Device Overview Tile -->
+    <string name="device_name_label">Device Name</string>
+    <string name="storage_used_label">Storage Used</string>
+    <string name="tap_to_copy">Tap to copy</string>
 
     <!-- RAM Info -->
     <string name="ram_info_title">RAM</string>

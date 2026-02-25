@@ -14,9 +14,9 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!-- Glassmorphic State Selector with Ripple Effect -->
+<!-- Premium Glassmorphic State Selector with Enhanced Depth and Polish -->
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="#30FFFFFF">
+    android:color="#40FFFFFF">
     
     <!-- Mask for ripple bounds -->
     <item android:id="@android:id/mask">
@@ -26,51 +26,89 @@
         </shape>
     </item>
     
-    <!-- Base glassmorphic background -->
+    <!-- Base glassmorphic background with enhanced layers -->
     <item>
         <layer-list>
-            <!-- Layer 1: Base gradient for depth simulation -->
+            
+            <!-- Layer 1: Deep shadow simulation -->
             <item>
                 <shape android:shape="rectangle">
                     <gradient
                         android:angle="135"
-                        android:startColor="#15FFFFFF"
-                        android:centerColor="#08FFFFFF"
-                        android:endColor="#03FFFFFF"
+                        android:startColor="#08C8E6FF"
+                        android:centerColor="#04A8C2FF"
+                        android:endColor="#0090B0D0"
                         android:type="linear"/>
                     <corners android:radius="@dimen/havoc_corner_radius"/>
                 </shape>
             </item>
             
-            <!-- Layer 2: Primary semi-transparent glass surface -->
+            <!-- Layer 2: Primary glass surface with cyan tint -->
             <item>
                 <shape android:shape="rectangle">
-                    <solid android:color="#35FFFFFF"/>
+                    <solid android:color="#45E8F4FD"/>
                     <corners android:radius="@dimen/havoc_corner_radius"/>
                 </shape>
             </item>
             
-            <!-- Layer 3: Top highlight for glass reflection effect -->
+            <!-- Layer 3: Diagonal light reflection -->
             <item>
                 <shape android:shape="rectangle">
                     <gradient
-                        android:angle="90"
-                        android:startColor="#40FFFFFF"
-                        android:centerColor="#00FFFFFF"
+                        android:angle="145"
+                        android:startColor="#00FFFFFF"
+                        android:centerColor="#25FFFFFF"
                         android:endColor="#00FFFFFF"
                         android:type="linear"/>
                     <corners android:radius="@dimen/havoc_corner_radius"/>
                 </shape>
             </item>
             
-            <!-- Layer 4: Inner glow border effect -->
+            <!-- Layer 4: Top highlight for glass reflection -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="90"
+                        android:startColor="#70FFFFFF"
+                        android:centerColor="#20FFFFFF"
+                        android:endColor="#00FFFFFF"
+                        android:type="linear"/>
+                    <corners android:radius="@dimen/havoc_corner_radius"/>
+                </shape>
+            </item>
+            
+            <!-- Layer 5: Subtle inner glow from bottom -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="270"
+                        android:startColor="#15C8E6FF"
+                        android:centerColor="#08C8E6FF"
+                        android:endColor="#00FFFFFF"
+                        android:type="linear"/>
+                    <corners android:radius="@dimen/havoc_corner_radius"/>
+                </shape>
+            </item>
+            
+            <!-- Layer 6: Refined border with glow effect -->
             <item>
                 <shape android:shape="rectangle">
                     <solid android:color="#00FFFFFF"/>
                     <corners android:radius="@dimen/havoc_corner_radius"/>
                     <stroke
-                        android:width="1.5dp"
-                        android:color="#45FFFFFF"/>
+                        android:width="1dp"
+                        android:color="#55FFFFFF"/>
+                </shape>
+            </item>
+            
+            <!-- Layer 7: Outer glow border -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#00FFFFFF"/>
+                    <corners android:radius="@dimen/havoc_corner_radius"/>
+                    <stroke
+                        android:width="0.5dp"
+                        android:color="#35C8E6FF"/>
                 </shape>
             </item>
         </layer-list>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- Hardware Grid Tile - 2 Column Layout for Hardware Info -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <!-- Main Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp">
+
+        <!-- Glassmorphic Background -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Background -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/device_info_card_background"/>
+
+            <!-- Top Highlight -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="1dp"
+                android:background="#50FFFFFF"/>
+
+            <!-- Two Column Grid -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:padding="12dp">
+
+                <!-- Column 1: Item 1 (e.g., Processor) -->
+                <LinearLayout
+                    android:id="@+id/column1_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless">
+
+                    <!-- Icon Container -->
+                    <FrameLayout
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginBottom="8dp">
+
+                        <!-- Icon Background -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/device_info_icon_bg"
+                            android:alpha="0.5"/>
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:id="@+id/item1_icon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_device_info_default"
+                            android:tint="@color/device_info_icon_tint"
+                            android:contentDescription="@null"/>
+
+                    </FrameLayout>
+
+                    <!-- Label -->
+                    <TextView
+                        android:id="@+id/item1_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Processor"
+                        android:textAppearance="@style/TextAppearance.SettingsLib.LabelSmall"
+                        android:textColor="@color/device_info_summary"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+
+                    <!-- Value -->
+                    <TextView
+                        android:id="@+id/item1_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Snapdragon 8 Gen 3"
+                        android:textAppearance="@style/TextAppearance.SettingsLib.BodyMedium"
+                        android:textColor="@color/device_info_title"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:ellipsize="end"/>
+
+                    <!-- Sub Value -->
+                    <TextView
+                        android:id="@+id/item1_subvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="Octa-core 3.3 GHz"
+                        android:textAppearance="@style/TextAppearance.SettingsLib.LabelSmall"
+                        android:textColor="@color/device_info_summary"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                </LinearLayout>
+
+                <!-- Vertical Divider -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#25FFFFFF"/>
+
+                <!-- Column 2: Item 2 (e.g., RAM) -->
+                <LinearLayout
+                    android:id="@+id/column2_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless">
+
+                    <!-- Icon Container -->
+                    <FrameLayout
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginBottom="8dp">
+
+                        <!-- Icon Background -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/device_info_icon_bg"
+                            android:alpha="0.5"/>
+
+                        <!-- Icon -->
+                        <ImageView
+                            android:id="@+id/item2_icon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_device_info_default"
+                            android:tint="@color/device_info_icon_tint_secondary"
+                            android:contentDescription="@null"/>
+
+                    </FrameLayout>
+
+                    <!-- Label -->
+                    <TextView
+                        android:id="@+id/item2_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RAM"
+                        android:textAppearance="@style/TextAppearance.SettingsLib.LabelSmall"
+                        android:textColor="@color/device_info_summary"
+                        android:textSize="11sp"
+                        android:gravity="center"/>
+
+                    <!-- Value -->
+                    <TextView
+                        android:id="@+id/item2_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="16 GB"
+                        android:textAppearance="@style/TextAppearance.SettingsLib.BodyMedium"
+                        android:textColor="@color/device_info_title"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:ellipsize="end"/>
+
+                    <!-- Sub Value -->
+                    <TextView
+                        android:id="@+id/item2_subvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:text="LPDDR5X"
+                        android:textAppearance="@style/TextAppearance.SettingsLib.LabelSmall"
+                        android:textColor="@color/device_info_summary"
+                        android:textSize="10sp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

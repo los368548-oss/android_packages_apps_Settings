@@ -14,30 +14,42 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!-- Logo Glow Effect -->
+<!-- Logo Glow Effect Drawable -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Outer glow -->
+    
+    <!-- Outer glow ring -->
     <item>
         <shape android:shape="oval">
             <solid android:color="#15FF8A65"/>
-            <size android:width="72dp" android:height="72dp"/>
+            <size android:width="88dp" android:height="88dp"/>
         </shape>
     </item>
     
     <!-- Middle glow ring -->
-    <item android:top="6dp" android:bottom="6dp" android:left="6dp" android:right="6dp">
+    <item android:top="8dp" android:bottom="8dp" android:left="8dp" android:right="8dp">
         <shape android:shape="oval">
-            <solid android:color="#25FF8A65"/>
-            <size android:width="60dp" android:height="60dp"/>
+            <solid android:color="#20FF8A65"/>
+            <size android:width="72dp" android:height="72dp"/>
         </shape>
     </item>
     
     <!-- Inner glow ring -->
-    <item android:top="10dp" android:bottom="10dp" android:left="10dp" android:right="10dp">
+    <item android:top="16dp" android:bottom="16dp" android:left="16dp" android:right="16dp">
         <shape android:shape="oval">
-            <solid android:color="#35FFFFFF"/>
-            <stroke android:width="1dp" android:color="#40FF8A65"/>
-            <size android:width="52dp" android:height="52dp"/>
+            <solid android:color="#25FF8A65"/>
+            <size android:width="56dp" android:height="56dp"/>
         </shape>
     </item>
+    
+    <!-- Center highlight -->
+    <item android:top="20dp" android:bottom="20dp" android:left="20dp" android:right="20dp">
+        <shape android:shape="oval">
+            <gradient
+                android:angle="135"
+                android:startColor="#40FFFFFF"
+                android:endColor="#00FFFFFF"/>
+            <size android:width="48dp" android:height="48dp"/>
+        </shape>
+    </item>
+    
 </layer-list>

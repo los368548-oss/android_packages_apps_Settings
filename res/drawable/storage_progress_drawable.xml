@@ -14,10 +14,10 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!-- Storage Progress Bar Drawable -->
+<!-- Premium Storage Progress Drawable with Gradient -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     
-    <!-- Background track -->
+    <!-- Progress background track -->
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
             <solid android:color="#20FFFFFF"/>
@@ -25,29 +25,38 @@
         </shape>
     </item>
     
-    <!-- Progress fill -->
+    <!-- Secondary progress -->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="#30FF8A65"/>
+                <corners android:radius="4dp"/>
+            </shape>
+        </clip>
+    </item>
+    
+    <!-- Primary progress with gradient -->
     <item android:id="@android:id/progress">
         <clip>
             <layer-list>
-                <!-- Gradient progress -->
+                <!-- Gradient fill -->
                 <item>
                     <shape android:shape="rectangle">
                         <gradient
                             android:angle="0"
-                            android:startColor="#FF6B35"
-                            android:centerColor="#FF8A65"
-                            android:endColor="#FFAB91"
+                            android:startColor="#FF8A65"
+                            android:centerColor="#FFAB91"
+                            android:endColor="#26A69A"
                             android:type="linear"/>
                         <corners android:radius="4dp"/>
                     </shape>
                 </item>
-                <!-- Shine effect -->
-                <item>
+                <!-- Top highlight -->
+                <item android:top="0dp" android:bottom="2dp">
                     <shape android:shape="rectangle">
                         <gradient
                             android:angle="90"
                             android:startColor="#40FFFFFF"
-                            android:centerColor="#00FFFFFF"
                             android:endColor="#00FFFFFF"
                             android:type="linear"/>
                         <corners android:radius="4dp"/>

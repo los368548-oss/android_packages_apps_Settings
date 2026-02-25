@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- Combined Device Name + Storage Tile with Two Columns -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp">
+
+        <!-- Main glassmorphic background -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/device_info_card_background"/>
+
+        <!-- Top highlight reflection -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="#70FFFFFF"
+            android:alpha="0.8"/>
+
+        <!-- Two Column Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- Column 1: Device Name -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <!-- Phone Icon Container -->
+                <FrameLayout
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="12dp">
+
+                    <!-- Icon background glow -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/device_info_icon_bg"
+                        android:alpha="0.6"/>
+
+                    <!-- Icon -->
+                    <ImageView
+                        android:id="@+id/device_name_icon"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_device_info_default"
+                        android:tint="@color/device_info_icon_tint"
+                        android:contentDescription="@null"/>
+
+                </FrameLayout>
+
+                <!-- Device Name Text -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/device_name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Device name"
+                        android:textAppearance="@style/TextAppearance.SettingsLib.LabelSmall"
+                        android:textColor="@color/device_info_summary"
+                        android:textSize="11sp"/>
+
+                    <TextView
+                        android:id="@+id/device_name_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textAppearance="@style/TextAppearance.SettingsLib.BodyMedium"
+                        android:textColor="@color/device_info_title"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Vertical Divider -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#25FFFFFF"/>
+
+            <!-- Column 2: Storage with Circular Progress -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <!-- Circular Progress Container -->
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp">
+
+                    <!-- Background circle -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/circular_progress_bg"/>
+
+                    <!-- Progress circle -->
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/storage_circular_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="65"
+                        app:indicatorColor="@color/progress_fill_primary"
+                        app:trackColor="@color/progress_track_background"
+                        app:trackThickness="4dp"
+                        app:indicatorSize="44dp"/>
+
+                    <!-- Percentage text in center -->
+                    <TextView
+                        android:id="@+id/storage_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="65%"
+                        android:textAppearance="@style/TextAppearance.SettingsLib.LabelSmall"
+                        android:textColor="@color/device_info_icon_tint"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                </FrameLayout>
+
+                <!-- Storage Text -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/storage_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Storage"
+                        android:textAppearance="@style/TextAppearance.SettingsLib.LabelSmall"
+                        android:textColor="@color/device_info_summary"
+                        android:textSize="11sp"/>
+
+                    <TextView
+                        android:id="@+id/storage_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textAppearance="@style/TextAppearance.SettingsLib.BodyMedium"
+                        android:textColor="@color/device_info_title"
+                        android:textStyle="bold"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -16,85 +16,139 @@
 -->
 <resources>
 
-    <!-- HavocOOS Enhanced Glassmorphic Color Palette -->
+    <!-- HavocOOS Premium Glassmorphic Color Palette v2.0 -->
+    <!-- Enhanced with subtle tints for better visual depth and polish -->
     
-    <!-- Light Mode Glassmorphic Colors -->
-    <!-- Primary glass surface colors -->
-    <color name="glassmorphic_surface_light">#35FFFFFF</color>
-    <color name="glassmorphic_surface_medium">#40FFFFFF</color>
-    <color name="glassmorphic_surface_strong">#50FFFFFF</color>
+    <!-- ============================================ -->
+    <!-- LIGHT MODE GLASSMORPHIC COLORS              -->
+    <!-- ============================================ -->
     
-    <!-- Gradient colors for depth -->
-    <color name="glassmorphic_gradient_start">#15FFFFFF</color>
-    <color name="glassmorphic_gradient_center">#08FFFFFF</color>
-    <color name="glassmorphic_gradient_end">#03FFFFFF</color>
+    <!-- Primary glass surface colors with subtle cyan tint -->
+    <color name="glassmorphic_surface_light">#45E8F4FD</color>
+    <color name="glassmorphic_surface_medium">#55E0F0FF</color>
+    <color name="glassmorphic_surface_strong">#65D8ECFF</color>
     
-    <!-- Highlight colors for glass reflection -->
-    <color name="glassmorphic_highlight_top">#40FFFFFF</color>
-    <color name="glassmorphic_highlight_shimmer">#50FFFFFF</color>
-    <color name="glassmorphic_highlight">#60FFFFFF</color>
+    <!-- Gradient colors for depth with blue tint -->
+    <color name="glassmorphic_gradient_start">#25C8E6FF</color>
+    <color name="glassmorphic_gradient_center">#15B8D4FF</color>
+    <color name="glassmorphic_gradient_end">#08A8C2FF</color>
     
-    <!-- Border colors -->
-    <color name="glassmorphic_border_primary">#45FFFFFF</color>
-    <color name="glassmorphic_border_outer">#15FFFFFF</color>
-    <color name="glassmorphic_border_glow">#20FFFFFF</color>
+    <!-- Highlight colors for glass reflection - brighter -->
+    <color name="glassmorphic_highlight_top">#70FFFFFF</color>
+    <color name="glassmorphic_highlight_shimmer">#60FFFFFF</color>
+    <color name="glassmorphic_highlight">#80FFFFFF</color>
+    
+    <!-- Border colors with subtle glow -->
+    <color name="glassmorphic_border_primary">#55FFFFFF</color>
+    <color name="glassmorphic_border_outer">#25FFFFFF</color>
+    <color name="glassmorphic_border_glow">#35C8E6FF</color>
     
     <!-- Ripple colors -->
-    <color name="glassmorphic_ripple_light">#30FFFFFF</color>
-    <color name="glassmorphic_ripple_medium">#25FFFFFF</color>
+    <color name="glassmorphic_ripple_light">#40FFFFFF</color>
+    <color name="glassmorphic_ripple_medium">#30FFFFFF</color>
     
-    <!-- Dark Mode Glassmorphic Colors -->
-    <!-- Primary glass surface colors -->
-    <color name="glassmorphic_surface_dark">#28000000</color>
-    <color name="glassmorphic_surface_dark_medium">#30000000</color>
-    <color name="glassmorphic_surface_dark_strong">#38000000</color>
+    <!-- ============================================ -->
+    <!-- DARK MODE GLASSMORPHIC COLORS               -->
+    <!-- ============================================ -->
     
-    <!-- Gradient colors for depth (dark mode) -->
-    <color name="glassmorphic_gradient_dark_start">#20000000</color>
-    <color name="glassmorphic_gradient_dark_center">#10000000</color>
-    <color name="glassmorphic_gradient_dark_end">#05000000</color>
+    <!-- Primary glass surface colors with subtle purple tint -->
+    <color name="glassmorphic_surface_dark">#35182535</color>
+    <color name="glassmorphic_surface_dark_medium">#40203045</color>
+    <color name="glassmorphic_surface_dark_strong">#48283550</color>
+    
+    <!-- Gradient colors for depth (dark mode) with purple tint -->
+    <color name="glassmorphic_gradient_dark_start">#28182030</color>
+    <color name="glassmorphic_gradient_dark_center">#18101520</color>
+    <color name="glassmorphic_gradient_dark_end">#0A080A10</color>
     
     <!-- Highlight colors for glass reflection (dark mode) -->
-    <color name="glassmorphic_highlight_dark_top">#18FFFFFF</color>
-    <color name="glassmorphic_highlight_dark_shimmer">#25FFFFFF</color>
+    <color name="glassmorphic_highlight_dark_top">#25FFFFFF</color>
+    <color name="glassmorphic_highlight_dark_shimmer">#30FFFFFF</color>
     
-    <!-- Border colors (dark mode) -->
-    <color name="glassmorphic_border_dark_primary">#18FFFFFF</color>
-    <color name="glassmorphic_border_dark_outer">#08FFFFFF</color>
-    <color name="glassmorphic_border_dark_glow">#10FFFFFF</color>
+    <!-- Border colors (dark mode) with subtle glow -->
+    <color name="glassmorphic_border_dark_primary">#22FFFFFF</color>
+    <color name="glassmorphic_border_dark_outer">#10FFFFFF</color>
+    <color name="glassmorphic_border_dark_glow">#184060FF</color>
     
     <!-- Ripple colors (dark mode) -->
-    <color name="glassmorphic_ripple_dark">#20FFFFFF</color>
-    <color name="glassmorphic_ripple_dark_medium">#15FFFFFF</color>
+    <color name="glassmorphic_ripple_dark">#28FFFFFF</color>
+    <color name="glassmorphic_ripple_dark_medium">#18FFFFFF</color>
     
-    <!-- Accent Tint Colors -->
+    <!-- ============================================ -->
+    <!-- ACCENT TINT COLORS                          -->
+    <!-- ============================================ -->
+    
+    <!-- Primary accent - Coral/Orange -->
     <color name="glassmorphic_accent_primary">#FF8A65</color>
-    <color name="glassmorphic_accent_surface">#25FF8A65</color>
-    <color name="glassmorphic_accent_gradient_start">#10FF8A65</color>
-    <color name="glassmorphic_accent_border">#35FF8A65</color>
+    <color name="glassmorphic_accent_surface">#30FF8A65</color>
+    <color name="glassmorphic_accent_gradient_start">#18FF8A65</color>
+    <color name="glassmorphic_accent_border">#45FF8A65</color>
     
-    <!-- Premium Shimmer Colors -->
-    <color name="glassmorphic_shimmer_surface">#38FFFFFF</color>
-    <color name="glassmorphic_shimmer_highlight">#55FFFFFF</color>
-    <color name="glassmorphic_shimmer_border">#50FFFFFF</color>
+    <!-- Secondary accent - Teal/Cyan for variety -->
+    <color name="glassmorphic_accent_secondary">#26A69A</color>
+    <color name="glassmorphic_accent_secondary_surface">#2026A69A</color>
+    <color name="glassmorphic_accent_secondary_border">#3526A69A</color>
     
-    <!-- Premium Shimmer Colors (Dark Mode) -->
-    <color name="glassmorphic_shimmer_dark_surface">#30000000</color>
-    <color name="glassmorphic_shimmer_dark_highlight">#22FFFFFF</color>
-    <color name="glassmorphic_shimmer_dark_border">#22FFFFFF</color>
+    <!-- Tertiary accent - Purple for premium feel -->
+    <color name="glassmorphic_accent_tertiary">#AB47BC</color>
+    <color name="glassmorphic_accent_tertiary_surface">#20AB47BC</color>
+    <color name="glassmorphic_accent_tertiary_border">#35AB47BC</color>
+    
+    <!-- ============================================ -->
+    <!-- PREMIUM SHIMMER COLORS                      -->
+    <!-- ============================================ -->
+    
+    <!-- Light mode shimmer -->
+    <color name="glassmorphic_shimmer_surface">#48FFFFFF</color>
+    <color name="glassmorphic_shimmer_highlight">#70FFFFFF</color>
+    <color name="glassmorphic_shimmer_border">#60FFFFFF</color>
+    
+    <!-- Dark mode shimmer -->
+    <color name="glassmorphic_shimmer_dark_surface">#38182030</color>
+    <color name="glassmorphic_shimmer_dark_highlight">#30FFFFFF</color>
+    <color name="glassmorphic_shimmer_dark_border">#28FFFFFF</color>
 
-    <!-- HavocOOS Banner Colors -->
-    <color name="havoc_banner_accent">#FF8A65</color>
-    <color name="havoc_banner_title">#FFFFFFFF</color>
-    <color name="havoc_banner_subtitle">#CCFFFFFF</color>
-    <color name="havoc_banner_background">#38FFFFFF</color>
-    <color name="havoc_banner_glow">#25FF8A65</color>
+    <!-- ============================================ -->
+    <!-- HAVOCOOS BANNER COLORS                      -->
+    <!-- ============================================ -->
     
-    <!-- Device Info Card Colors -->
-    <color name="device_info_card_background">#35FFFFFF</color>
-    <color name="device_info_card_border">#45FFFFFF</color>
+    <color name="havoc_banner_accent">#FF8A65</color>
+    <color name="havoc_banner_accent_secondary">#26A69A</color>
+    <color name="havoc_banner_title">#FFFFFFFF</color>
+    <color name="havoc_banner_subtitle">#DDFFFFFF</color>
+    <color name="havoc_banner_background">#45E8F4FD</color>
+    <color name="havoc_banner_glow">#30FF8A65</color>
+    <color name="havoc_banner_border">#55FFFFFF</color>
+    
+    <!-- ============================================ -->
+    <!-- DEVICE INFO CARD COLORS                     -->
+    <!-- ============================================ -->
+    
+    <!-- Card backgrounds with enhanced tint -->
+    <color name="device_info_card_background">#48E8F4FD</color>
+    <color name="device_info_card_background_dark">#38182535</color>
+    <color name="device_info_card_border">#55FFFFFF</color>
+    <color name="device_info_card_border_dark">#22FFFFFF</color>
+    
+    <!-- Icon tints - gradient accent colors -->
     <color name="device_info_icon_tint">#FF8A65</color>
+    <color name="device_info_icon_tint_secondary">#26A69A</color>
+    <color name="device_info_icon_tint_tertiary">#AB47BC</color>
+    <color name="device_info_icon_bg">#20FF8A65</color>
+    
+    <!-- Text colors with better contrast -->
     <color name="device_info_title">#FFFFFFFF</color>
-    <color name="device_info_summary">#AAFFFFFF</color>
+    <color name="device_info_summary">#CCFFFFFF</color>
+    <color name="device_info_value">#E0FFFFFF</color>
+    
+    <!-- ============================================ -->
+    <!-- PROGRESS BAR COLORS                         -->
+    <!-- ============================================ -->
+    
+    <color name="progress_track_background">#25FFFFFF</color>
+    <color name="progress_track_dark_background">#18202530</color>
+    <color name="progress_fill_primary">#FF8A65</color>
+    <color name="progress_fill_secondary">#26A69A</color>
+    <color name="progress_fill_tertiary">#AB47BC</color>
 
 </resources>

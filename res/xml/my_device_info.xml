@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   Copyright (C) 2018 The Android Open Source Project
+  Copyright (C) 2025 The HavocOOS Project
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,12 +16,21 @@
   limitations under the License.
   -->
 
+<!-- 
+  About Phone Layout - Reorganized with Combined Tiles
+  Categories: Banner → Device Overview → Hardware → Software → Network → Quick Links
+-->
+
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="my_device_info_pref_screen"
     android:title="@string/about_settings">
 
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- HAVOCOOS BANNER - Hero Section -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    
     <!-- HavocOOS Banner - Clickable to go to Updater -->
     <com.android.settingslib.widget.LayoutPreference
         android:key="havoc_banner"
@@ -35,163 +45,100 @@
         android:selectable="false"
         settings:isPreferenceVisible="false"/>
 
-    <!-- Hardware Info Category - Glassmorphic Cards -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- DEVICE OVERVIEW - Device Name + Storage -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <PreferenceCategory
+        android:key="device_overview_category"
+        android:selectable="false"
+        android:title="@string/device_info_overview_category_title"
+        android:order="1">
+
+        <!-- Combined Device Name + Storage Tile -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="device_overview_tile"
+            android:layout="@layout/device_name_storage_tile"
+            android:selectable="false"
+            android:order="1"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.DeviceOverviewPreferenceController"/>
+
+    </PreferenceCategory>
+
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- HARDWARE INFO - Combined Grid Tiles -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
     <PreferenceCategory
         android:key="hardware_info_category"
         android:selectable="false"
         android:title="@string/device_info_hardware_category_title"
-        android:order="1">
-
-        <!-- Camera Info -->
-        <com.android.settingslib.widget.LayoutPreference
-            android:key="camera_info"
-            android:layout="@layout/device_info_card_preference"
-            android:selectable="false"
-            android:order="1"
-            settings:controller="com.android.settings.deviceinfo.aboutphone.CameraInfoPreferenceController"/>
-
-        <!-- Processor Info -->
-        <com.android.settingslib.widget.LayoutPreference
-            android:key="processor_info"
-            android:layout="@layout/device_info_card_preference"
-            android:selectable="false"
-            android:order="2"
-            settings:controller="com.android.settings.deviceinfo.aboutphone.ProcessorInfoPreferenceController"/>
-
-        <!-- RAM Info -->
-        <com.android.settingslib.widget.LayoutPreference
-            android:key="ram_info"
-            android:layout="@layout/device_info_card_preference"
-            android:selectable="false"
-            android:order="3"
-            settings:controller="com.android.settings.deviceinfo.aboutphone.RamInfoPreferenceController"/>
-
-        <!-- Storage Info -->
-        <com.android.settingslib.widget.LayoutPreference
-            android:key="storage_info"
-            android:layout="@layout/device_info_card_preference"
-            android:selectable="false"
-            android:order="4"
-            settings:controller="com.android.settings.deviceinfo.aboutphone.StorageInfoPreferenceController"/>
-
-        <!-- Battery Info -->
-        <com.android.settingslib.widget.LayoutPreference
-            android:key="battery_info"
-            android:layout="@layout/device_info_card_preference"
-            android:selectable="false"
-            android:order="5"
-            settings:controller="com.android.settings.deviceinfo.aboutphone.BatteryInfoPreferenceController"/>
-
-        <!-- Display Info -->
-        <com.android.settingslib.widget.LayoutPreference
-            android:key="display_info"
-            android:layout="@layout/device_info_card_preference"
-            android:selectable="false"
-            android:order="6"
-            settings:controller="com.android.settings.deviceinfo.aboutphone.DisplayInfoPreferenceController"/>
-
-        <!-- GPU Info -->
-        <com.android.settingslib.widget.LayoutPreference
-            android:key="gpu_info"
-            android:layout="@layout/device_info_card_preference"
-            android:selectable="false"
-            android:order="7"
-            settings:controller="com.android.settings.deviceinfo.aboutphone.GpuInfoPreferenceController"/>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:key="basic_info_category"
-        android:selectable="false"
-        android:title="@string/my_device_info_basic_info_category_title"
         android:order="2">
 
-        <!-- Device name -->
-        <com.android.settings.widget.ValidatedEditTextPreference
-            android:key="device_name"
+        <!-- Hardware Grid Tile 1: Processor + RAM -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="hardware_tile_processor_ram"
+            android:layout="@layout/hardware_grid_tile"
+            android:selectable="false"
             android:order="1"
-            android:title="@string/my_device_info_device_name_preference_title"
-            android:summary="@string/summary_placeholder"
-            settings:controller="com.android.settings.deviceinfo.DeviceNamePreferenceController"
-            settings:enableCopying="true"/>
+            settings:controller="com.android.settings.deviceinfo.aboutphone.ProcessorRamPreferenceController"/>
 
-        <!-- Account name -->
-        <Preference
-            android:key="branded_account"
+        <!-- Hardware Grid Tile 2: Battery + Display -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="hardware_tile_battery_display"
+            android:layout="@layout/hardware_grid_tile"
+            android:selectable="false"
             android:order="2"
-            android:title="@string/my_device_info_account_preference_title"
-            android:summary="@string/summary_placeholder"
-            settings:enableCopying="true"
-            settings:controller="com.android.settings.deviceinfo.BrandedAccountPreferenceController"/>
+            settings:controller="com.android.settings.deviceinfo.aboutphone.BatteryDisplayPreferenceController"/>
 
-        <!-- Phone number -->
-        <Preference
-            android:key="phone_number"
+        <!-- Hardware Grid Tile 3: Camera + GPU -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="hardware_tile_camera_gpu"
+            android:layout="@layout/hardware_grid_tile"
+            android:selectable="false"
             android:order="3"
-            android:title="@string/status_number"
-            android:summary="@string/summary_placeholder"
-            settings:isPreferenceVisible="@bool/config_show_sim_info"
-            settings:controller="com.android.settings.deviceinfo.PhoneNumberPreferenceController"
-            settings:enableCopying="true"/>
+            settings:controller="com.android.settings.deviceinfo.aboutphone.CameraGpuPreferenceController"/>
+
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="legal_category"
-        android:title="@string/my_device_info_legal_category_title">
-
-        <!-- Legal information -->
-        <Preference
-            android:key="legal_container"
-            android:order="15"
-            android:title="@string/legal_information"
-            android:fragment="com.android.settings.LegalSettings"/>
-
-        <!-- Regulatory labels -->
-        <Preference
-            android:key="regulatory_info"
-            android:order="16"
-            android:title="@string/regulatory_labels">
-            <intent android:action="android.settings.SHOW_REGULATORY_INFO"
-                    android:targetPackage="${applicationId}"/>
-        </Preference>
-
-        <!-- Safety & regulatory manual -->
-        <Preference
-            android:key="safety_info"
-            android:order="18"
-            android:title="@string/safety_and_regulatory_info"/>
-    </PreferenceCategory>
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- SOFTWARE INFO - Combined Grid Tiles -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
 
     <PreferenceCategory
-        android:key="device_detail_category"
+        android:key="software_info_category"
         android:selectable="false"
-        android:title="@string/my_device_info_device_details_category_title">
+        android:title="@string/my_device_info_basic_info_category_title"
+        android:order="3">
 
-        <!-- SIM status -->
-        <Preference
-            android:key="sim_status"
-            android:order="19"
-            android:title="@string/sim_status_title"
-            settings:keywords="@string/keywords_sim_status"
-            android:summary="@string/summary_placeholder"
-            settings:isPreferenceVisible="@bool/config_show_sim_info"
-            settings:controller="com.android.settings.deviceinfo.simstatus.SimStatusPreferenceController"/>
+        <!-- Android Version - Full Width Card -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="android_version"
+            android:layout="@layout/device_info_card_preference"
+            android:selectable="true"
+            android:order="1"
+            settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
 
-        <!-- Model & hardware -->
-        <Preference
-            android:key="device_model"
-            android:order="30"
-            android:title="@string/model_info"
-            android:summary="@string/summary_placeholder"
-            android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
-            settings:enableCopying="true"
-            settings:keywords="@string/keywords_model_and_hardware"
-            settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"/>
+        <!-- Software Grid Tile 1: SIM Status + Phone Number -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="software_tile_sim_phone"
+            android:layout="@layout/software_grid_tile"
+            android:selectable="true"
+            android:order="2"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.SimPhonePreferenceController"/>
 
-        <!-- EID -->
+        <!-- Software Grid Tile 2: Model + IMEI -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="software_tile_model_imei"
+            android:layout="@layout/software_grid_tile"
+            android:selectable="true"
+            android:order="3"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.ModelImeiPreferenceController"/>
+
+        <!-- EID (for eSIM devices) -->
         <com.android.settings.deviceinfo.simstatus.SimEidInfoPreference
             android:key="eid_info"
-            android:order="31"
+            android:order="4"
             android:title="@string/status_eid"
             android:positiveButtonText="@string/dlg_ok"
             android:dialogLayout="@layout/dialog_eid_status"
@@ -199,115 +146,63 @@
             settings:enableCopying="true"
             settings:controller="com.android.settings.deviceinfo.simstatus.SimEidPreferenceController"/>
 
-        <!-- IMEI -->
-        <Preference
-            android:key="imei_info"
-            android:order="32"
-            android:title="@string/status_imei"
-            android:summary="@string/summary_placeholder"
-            settings:keywords="@string/keywords_imei_info"
-            settings:enableCopying="true"
-            settings:isPreferenceVisible="@bool/config_show_sim_info"
-            settings:controller="com.android.settings.deviceinfo.imei.ImeiInfoPreferenceController"/>
-
-        <!-- Android version -->
-        <Preference
-            android:key="firmware_version"
-            android:order="42"
-            android:title="@string/firmware_version"
-            android:summary="@string/summary_placeholder"
-            android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
-            settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
-
-        <!-- HavocOOS version -->
-        <Preference
-            android:key="havoc_os_version"
-            android:order="43"
-            android:title="@string/havoc_version"
-            android:summary="@string/summary_placeholder"
-            settings:enableCopying="true"
-            settings:controller="com.android.settings.deviceinfo.firmwareversion.HavocVersionDetailPreferenceController"/>
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="device_identifiers_category"
-        android:title="@string/my_device_info_device_identifiers_category_title">
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- NETWORK & IDENTIFIERS - Combined Grid Tiles -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
 
-        <!--IP address -->
+    <PreferenceCategory
+        android:key="network_identifiers_category"
+        android:selectable="false"
+        android:title="@string/my_device_info_device_identifiers_category_title"
+        android:order="4">
+
+        <!-- Network Grid Tile 1: Wi-Fi MAC + Bluetooth MAC -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="network_tile_wifi_bt"
+            android:layout="@layout/network_grid_tile"
+            android:selectable="false"
+            android:order="1"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.WifiBtMacPreferenceController"/>
+
+        <!-- Network Grid Tile 2: Uptime + Build Number -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="network_tile_uptime_build"
+            android:layout="@layout/network_grid_tile"
+            android:selectable="true"
+            android:order="2"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.UptimeBuildPreferenceController"/>
+
+        <!-- IP Address -->
         <Preference
             android:key="wifi_ip_address"
-            android:order="44"
+            android:order="3"
             android:title="@string/wifi_ip_address"
             android:summary="@string/summary_placeholder"
             android:selectable="false"
             settings:enableCopying="true"/>
 
-        <!-- Wi-Fi MAC address -->
-        <Preference
-            android:key="saved_accesspoints_wifi_mac_address"
-            android:order="45"
-            android:title="@string/status_wifi_mac_address"
-            android:summary="@string/view_saved_network"
-            android:fragment="com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2"
-            settings:enableCopying="false"/>
+    </PreferenceCategory>
 
-        <!-- Factory Wi-Fi MAC address -->
-        <Preference
-            android:key="wifi_mac_address"
-            android:order="46"
-            android:title="@string/status_device_wifi_mac_address"
-            android:summary="@string/summary_placeholder"
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+    <!-- QUICK LINKS - Compact Footer -->
+    <!-- ═══════════════════════════════════════════════════════════════ -->
+
+    <PreferenceCategory
+        android:key="quick_links_category"
+        android:selectable="false"
+        android:title="@string/my_device_info_legal_category_title"
+        android:order="5">
+
+        <!-- Quick Links Tile -->
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="quick_links_tile"
+            android:layout="@layout/quick_links_tile"
             android:selectable="false"
-            settings:enableCopying="true"/>
+            android:order="1"
+            settings:controller="com.android.settings.deviceinfo.aboutphone.QuickLinksPreferenceController"/>
 
-        <!-- Bluetooth address -->
-        <Preference
-            android:key="bt_address"
-            android:order="47"
-            android:title="@string/status_bt_address"
-            android:summary="@string/summary_placeholder"
-            android:selectable="false"
-            settings:enableCopying="true"/>
-
-        <!-- Device up time -->
-        <Preference
-            android:key="up_time"
-            android:order="48"
-            android:title="@string/status_up_time"
-            android:summary="@string/summary_placeholder"
-            android:selectable="false"/>
-
-        <!-- Manual -->
-        <Preference
-            android:key="manual"
-            android:order="50"
-            android:title="@string/manual">
-            <intent android:action="android.settings.SHOW_MANUAL"
-                    android:targetPackage="${applicationId}"/>
-        </Preference>
-
-        <!-- Feedback on the device -->
-        <Preference
-            android:key="device_feedback"
-            android:order="51"
-            android:title="@string/device_feedback"
-            settings:keywords="@string/keywords_device_feedback"/>
-
-        <!-- Device FCC equipment id -->
-        <Preference
-            android:key="fcc_equipment_id"
-            android:order="52"
-            android:title="@string/fcc_equipment_id"
-            android:summary="@string/summary_placeholder"/>
-
-        <!-- Build number -->
-        <Preference
-            android:key="build_number"
-            android:order="53"
-            android:title="@string/build_number"
-            android:summary="@string/summary_placeholder"
-            settings:enableCopying="true"
-            settings:controller="com.android.settings.deviceinfo.BuildNumberPreferenceController"/>
     </PreferenceCategory>
 
 </PreferenceScreen>

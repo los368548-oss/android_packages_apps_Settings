@@ -14,16 +14,19 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!-- Accent Gradient for Banner Top -->
+<!-- Banner Top Accent Gradient -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
+    
     <gradient
         android:angle="0"
-        android:startColor="#FF6B35"
-        android:centerColor="#FF8A65"
-        android:endColor="#FFAB91"
+        android:startColor="#FF8A65"
+        android:centerColor="#FFB74D"
+        android:endColor="#4DD0E1"
         android:type="linear"/>
+    
     <corners 
         android:topLeftRadius="24dp"
         android:topRightRadius="24dp"/>
+    
 </shape>

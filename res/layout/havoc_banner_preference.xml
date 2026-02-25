@@ -14,14 +14,17 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!-- HavocOOS Banner Preference with Enhanced Glassmorphic Design -->
-<FrameLayout
+<!-- HavocOOS Banner Preference - Enlarged Premium Glassmorphic Design -->
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:clipToPadding="false"
     android:clipChildren="false">
 
+    <!-- Main Banner -->
     <FrameLayout
         android:id="@+id/banner_container"
         android:layout_width="match_parent"
@@ -29,7 +32,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground">
@@ -43,7 +45,7 @@
         <!-- Shimmer overlay layer -->
         <View
             android:id="@+id/shimmer_layer"
-            android:layout_width="80dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:background="@drawable/shimmer_gradient"
             android:visibility="visible"/>
@@ -51,7 +53,7 @@
         <!-- Top gradient accent -->
         <View
             android:layout_width="match_parent"
-            android:layout_height="3dp"
+            android:layout_height="4dp"
             android:background="@drawable/havoc_banner_accent_gradient"/>
 
         <!-- Content container -->
@@ -59,14 +61,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="20dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
             android:gravity="center_vertical">
 
             <!-- Logo Container with glow effect -->
             <FrameLayout
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_marginEnd="16dp">
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_marginEnd="20dp">
 
                 <!-- Outer glow ring -->
                 <View
@@ -77,8 +82,8 @@
                 <!-- Logo -->
                 <ImageView
                     android:id="@+id/havoc_logo"
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
                     android:layout_gravity="center"
                     android:src="@drawable/ic_havoc_logo"
                     android:contentDescription="@string/havoc_logo_description"
@@ -99,39 +104,42 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/havoc_oos_title"
-                    android:textAppearance="@style/TextAppearance.SettingsLib.HeadlineMedium"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.HeadlineLarge"
                     android:textColor="@color/havoc_banner_title"
                     android:textStyle="bold"
-                    android:letterSpacing="0.02"/>
+                    android:letterSpacing="0.02"
+                    android:textSize="28sp"/>
 
-                <!-- Version Info -->
+                <!-- Tagline -->
                 <TextView
-                    android:id="@+id/havoc_version"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:textAppearance="@style/TextAppearance.SettingsLib.BodyMedium"
+                    android:layout_marginTop="2dp"
+                    android:text="Designed for Perfection"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.BodySmall"
                     android:textColor="@color/havoc_banner_subtitle"
-                    android:letterSpacing="0.01"/>
+                    android:letterSpacing="0.05"
+                    android:textSize="11sp"/>
 
                 <!-- Update Status -->
                 <TextView
                     android:id="@+id/havoc_update_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="10dp"
                     android:text="@string/tap_to_check_update"
-                    android:textAppearance="@style/TextAppearance.SettingsLib.LabelSmall"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.LabelMedium"
                     android:textColor="@color/havoc_banner_accent"
                     android:drawableStart="@drawable/ic_update_available"
-                    android:drawablePadding="6dp"/>
+                    android:drawablePadding="8dp"
+                    android:textSize="12sp"/>
 
             </LinearLayout>
 
             <!-- Arrow Indicator -->
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:src="@drawable/ic_arrow_right"
                 android:tint="@color/havoc_banner_accent"
                 android:alpha="0.7"
@@ -141,4 +149,115 @@
 
     </FrameLayout>
 
-</FrameLayout>
+    <!-- Version Tile (Below Banner) -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <!-- Glassmorphic background -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/device_info_card_background"/>
+
+        <!-- Top highlight -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="1dp"
+            android:background="#60FFFFFF"/>
+
+        <!-- Version Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Version Icon -->
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="14dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/device_info_icon_bg"
+                    android:alpha="0.5"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_info"
+                    android:tint="@color/device_info_icon_tint"
+                    android:contentDescription="@null"/>
+
+            </FrameLayout>
+
+            <!-- Version Info -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/havoc_version"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.LabelSmall"
+                    android:textColor="@color/device_info_summary"
+                    android:textSize="11sp"/>
+
+                <TextView
+                    android:id="@+id/havoc_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.BodyLarge"
+                    android:textColor="@color/device_info_title"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <!-- Build Info -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Build"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.LabelSmall"
+                    android:textColor="@color/device_info_summary"
+                    android:textSize="11sp"/>
+
+                <TextView
+                    android:id="@+id/build_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.BodyMedium"
+                    android:textColor="@color/device_info_title"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
+

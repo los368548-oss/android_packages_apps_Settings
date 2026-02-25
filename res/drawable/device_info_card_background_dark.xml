@@ -14,9 +14,9 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!-- Premium Device Info Card Background - Enhanced Glassmorphic Style -->
+<!-- Premium Device Info Card Background - Dark Mode with Purple Tint -->
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="#35FFFFFF">
+    android:color="#28FFFFFF">
     
     <!-- Mask for ripple bounds -->
     <item android:id="@android:id/mask">
@@ -29,23 +29,23 @@
     <item>
         <layer-list>
             
-            <!-- Level 1: Deep shadow base -->
+            <!-- Level 1: Deep shadow base with purple tint -->
             <item>
                 <shape android:shape="rectangle">
                     <gradient
                         android:angle="135"
-                        android:startColor="#08C8E6FF"
-                        android:centerColor="#04A8C2FF"
-                        android:endColor="#0090B0D0"
+                        android:startColor="#10182030"
+                        android:centerColor="#08101520"
+                        android:endColor="#04080A10"
                         android:type="linear"/>
                     <corners android:radius="20dp"/>
                 </shape>
             </item>
             
-            <!-- Level 2: Primary glass surface with cyan tint -->
+            <!-- Level 2: Primary glass surface with purple tint -->
             <item>
                 <shape android:shape="rectangle">
-                    <solid android:color="#48E8F4FD"/>
+                    <solid android:color="#38182535"/>
                     <corners android:radius="20dp"/>
                 </shape>
             </item>
@@ -56,7 +56,7 @@
                     <gradient
                         android:angle="145"
                         android:startColor="#00FFFFFF"
-                        android:centerColor="#20FFFFFF"
+                        android:centerColor="#15FFFFFF"
                         android:endColor="#00FFFFFF"
                         android:type="linear"/>
                     <corners android:radius="20dp"/>
@@ -68,8 +68,8 @@
                 <shape android:shape="rectangle">
                     <gradient
                         android:angle="90"
-                        android:startColor="#65FFFFFF"
-                        android:centerColor="#20FFFFFF"
+                        android:startColor="#28FFFFFF"
+                        android:centerColor="#10FFFFFF"
                         android:endColor="#00FFFFFF"
                         android:type="linear"/>
                     <corners android:radius="20dp"/>
@@ -81,8 +81,8 @@
                 <shape android:shape="rectangle">
                     <gradient
                         android:angle="270"
-                        android:startColor="#15FF8A65"
-                        android:centerColor="#08FF8A65"
+                        android:startColor="#12AB47BC"
+                        android:centerColor="#08AB47BC"
                         android:endColor="#00FFFFFF"
                         android:type="linear"/>
                     <corners android:radius="20dp"/>
@@ -96,7 +96,7 @@
                     <corners android:radius="20dp"/>
                     <stroke
                         android:width="1dp"
-                        android:color="#55FFFFFF"/>
+                        android:color="#22FFFFFF"/>
                 </shape>
             </item>
             
@@ -107,7 +107,7 @@
                     <corners android:radius="20dp"/>
                     <stroke
                         android:width="0.5dp"
-                        android:color="#30FF8A65"/>
+                        android:color="#184060FF"/>
                 </shape>
             </item>
         </layer-list>
