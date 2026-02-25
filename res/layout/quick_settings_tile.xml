@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="@drawable/glassmorphic_selector"
+        android:background="@drawable/glassmorphic_selector_dynamic"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         android:paddingTop="14dp"

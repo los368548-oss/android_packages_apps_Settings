@@ -36,11 +36,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- Glassmorphic background -->
+            <!-- Glassmorphic background - Dynamic Material You colors -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/homepage_category_background"/>
+                android:background="@drawable/homepage_category_background_dynamic"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

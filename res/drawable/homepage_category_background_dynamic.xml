@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- Homepage Category Background - Dynamic Material You Glassmorphic Design -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Base layer with dynamic surface tint -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp"/>
+            <solid android:color="@androidprv:color/materialColorSurfaceContainer"/>
+        </shape>
+    </item>
+    
+    <!-- Primary glass surface -->
+    <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="23dp"/>
+            <solid android:color="@androidprv:color/materialColorSurfaceContainerHigh"/>
+        </shape>
+    </item>
+    
+    <!-- Top highlight reflection -->
+    <item android:top="1dp" android:left="1dp" android:right="1dp" android:height="28dp">
+        <shape android:shape="rectangle">
+            <corners android:topLeftRadius="23dp" android:topRightRadius="23dp"/>
+            <gradient
+                android:angle="90"
+                android:startColor="@androidprv:color/materialColorSurfaceBright"
+                android:centerColor="#12FFFFFF"
+                android:endColor="#00FFFFFF"/>
+        </shape>
+    </item>
+    
+    <!-- Diagonal light reflection -->
+    <item android:top="1dp" android:left="1dp" android:right="1dp" android:height="42dp">
+        <shape android:shape="rectangle">
+            <corners android:topLeftRadius="23dp" android:topRightRadius="23dp"/>
+            <gradient
+                android:angle="45"
+                android:startColor="#00FFFFFF"
+                android:centerColor="@androidprv:color/materialColorSurfaceBright"
+                android:endColor="#00FFFFFF"/>
+        </shape>
+    </item>
+    
+    <!-- Inner glow from bottom with primary accent -->
+    <item android:bottom="1dp" android:left="1dp" android:right="1dp" android:height="18dp">
+        <shape android:shape="rectangle">
+            <corners android:bottomLeftRadius="23dp" android:bottomRightRadius="23dp"/>
+            <gradient
+                android:angle="270"
+                android:startColor="@androidprv:color/materialColorPrimaryContainer"
+                android:endColor="#00FFFFFF"/>
+        </shape>
+    </item>
+    
+    <!-- Outer border glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp"/>
+            <stroke android:width="1dp" android:color="@androidprv:color/materialColorOutlineVariant"/>
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+    
+    <!-- Inner subtle border -->
+    <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="23dp"/>
+            <stroke android:width="0.5dp" android:color="@androidprv:color/materialColorSurfaceBright"/>
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+    
+</layer-list>

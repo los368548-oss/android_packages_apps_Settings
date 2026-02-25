@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!--
+  Material You Dynamic Glassmorphic Colors v4.0
+  
+  These colors automatically adapt to the user's wallpaper through Material You (Monet).
+  The glassmorphic effect will now change colors based on wallpaper selection.
+  
+  Color Mapping:
+  - Primary accent → materialColorPrimary (from wallpaper)
+  - Surface colors → materialColorSurface variants (from wallpaper)
+  - Container colors → materialColorPrimaryContainer (from wallpaper)
+-->
+<resources xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
+
+    <!-- ============================================ -->
+    <!-- DYNAMIC GLASSMORPHIC SURFACE COLORS          -->
+    <!-- Uses Material You surface colors             -->
+    <!-- ============================================ -->
+    
+    <!-- Light mode glass surface - uses dynamic surface with transparency -->
+    <color name="glassmorphic_surface_light">@androidprv:color/materialColorSurface</color>
+    <color name="glassmorphic_surface_medium">@androidprv:color/materialColorSurfaceContainerHigh</color>
+    <color name="glassmorphic_surface_strong">@androidprv:color/materialColorSurfaceContainerHighest</color>
+    
+    <!-- Dark mode glass surface - uses dynamic dark surface -->
+    <color name="glassmorphic_surface_dark">@androidprv:color/materialColorSurface</color>
+    <color name="glassmorphic_surface_dark_medium">@androidprv:color/materialColorSurfaceContainerHigh</color>
+    <color name="glassmorphic_surface_dark_strong">@androidprv:color/materialColorSurfaceContainerHighest</color>
+
+    <!-- ============================================ -->
+    <!-- DYNAMIC GRADIENT COLORS                      -->
+    <!-- Subtle tinting from primary color            -->
+    <!-- ============================================ -->
+    
+    <!-- Light mode gradients with primary tint -->
+    <color name="glassmorphic_gradient_start">@androidprv:color/materialColorPrimaryContainer</color>
+    <color name="glassmorphic_gradient_center">@androidprv:color/materialColorSurfaceContainer</color>
+    <color name="glassmorphic_gradient_end">@androidprv:color/materialColorSurface</color>
+    
+    <!-- Dark mode gradients -->
+    <color name="glassmorphic_gradient_dark_start">@androidprv:color/materialColorPrimaryContainer</color>
+    <color name="glassmorphic_gradient_dark_center">@androidprv:color/materialColorSurfaceContainer</color>
+    <color name="glassmorphic_gradient_dark_end">@androidprv:color/materialColorSurface</color>
+
+    <!-- ============================================ -->
+    <!-- DYNAMIC HIGHLIGHT COLORS                     -->
+    <!-- White-based for glass reflection effect      -->
+    <!-- ============================================ -->
+    
+    <color name="glassmorphic_highlight_top">#72FFFFFF</color>
+    <color name="glassmorphic_highlight_shimmer">#58FFFFFF</color>
+    <color name="glassmorphic_highlight">#75FFFFFF</color>
+    
+    <!-- Dark mode highlights -->
+    <color name="glassmorphic_highlight_dark_top">#22FFFFFF</color>
+    <color name="glassmorphic_highlight_dark_shimmer">#15FFFFFF</color>
+
+    <!-- ============================================ -->
+    <!-- DYNAMIC BORDER COLORS                        -->
+    <!-- Uses dynamic outline/primary container       -->
+    <!-- ============================================ -->
+    
+    <color name="glassmorphic_border_primary">@androidprv:color/materialColorOutlineVariant</color>
+    <color name="glassmorphic_border_outer">@androidprv:color/materialColorSurfaceContainerHighest</color>
+    <color name="glassmorphic_border_glow">@androidprv:color/materialColorPrimaryContainer</color>
+    
+    <!-- Dark mode borders -->
+    <color name="glassmorphic_border_dark_primary">@androidprv:color/materialColorOutlineVariant</color>
+    <color name="glassmorphic_border_dark_outer">@androidprv:color/materialColorSurfaceContainer</color>
+    <color name="glassmorphic_border_dark_glow">@androidprv:color/materialColorPrimaryContainer</color>
+
+    <!-- ============================================ -->
+    <!-- DYNAMIC RIPPLE COLORS                        -->
+    <!-- ============================================ -->
+    
+    <color name="glassmorphic_ripple_light">@androidprv:color/materialColorPrimary</color>
+    <color name="glassmorphic_ripple_medium">@androidprv:color/materialColorSecondary</color>
+    <color name="glassmorphic_ripple_dark">@androidprv:color/materialColorPrimary</color>
+    <color name="glassmorphic_ripple_dark_medium">@androidprv:color/materialColorSecondary</color>
+
+    <!-- ============================================ -->
+    <!-- DYNAMIC ACCENT COLORS (from wallpaper)       -->
+    <!-- ============================================ -->
+    
+    <!-- Primary accent - follows wallpaper primary -->
+    <color name="glassmorphic_accent_primary">@androidprv:color/materialColorPrimary</color>
+    <color name="glassmorphic_accent_surface">@androidprv:color/materialColorPrimaryContainer</color>
+    <color name="glassmorphic_accent_gradient_start">@androidprv:color/materialColorPrimaryContainer</color>
+    <color name="glassmorphic_accent_border">@androidprv:color/materialColorPrimary</color>
+    
+    <!-- Secondary accent - follows wallpaper secondary -->
+    <color name="glassmorphic_accent_secondary">@androidprv:color/materialColorSecondary</color>
+    <color name="glassmorphic_accent_secondary_surface">@androidprv:color/materialColorSecondaryContainer</color>
+    <color name="glassmorphic_accent_secondary_border">@androidprv:color/materialColorSecondary</color>
+    
+    <!-- Tertiary accent - follows wallpaper tertiary -->
+    <color name="glassmorphic_accent_tertiary">@androidprv:color/materialColorTertiary</color>
+    <color name="glassmorphic_accent_tertiary_surface">@androidprv:color/materialColorTertiaryContainer</color>
+    <color name="glassmorphic_accent_tertiary_border">@androidprv:color/materialColorTertiary</color>
+
+    <!-- ============================================ -->
+    <!-- DYNAMIC SHIMMER COLORS                       -->
+    <!-- ============================================ -->
+    
+    <color name="glassmorphic_shimmer_surface">@androidprv:color/materialColorSurfaceContainerHigh</color>
+    <color name="glassmorphic_shimmer_highlight">@androidprv:color/materialColorSurfaceContainerHighest</color>
+    <color name="glassmorphic_shimmer_border">@androidprv:color/materialColorOutlineVariant</color>
+    
+    <color name="glassmorphic_shimmer_dark_surface">@androidprv:color/materialColorSurfaceContainer</color>
+    <color name="glassmorphic_shimmer_dark_highlight">@androidprv:color/materialColorSurfaceContainerHigh</color>
+    <color name="glassmorphic_shimmer_dark_border">@androidprv:color/materialColorOutlineVariant</color>
+
+    <!-- ============================================ -->
+    <!-- DYNAMIC HAVOCOOS BANNER COLORS               -->
+    <!-- ============================================ -->
+    
+    <color name="havoc_banner_accent">@androidprv:color/materialColorPrimary</color>
+    <color name="havoc_banner_accent_secondary">@androidprv:color/materialColorSecondary</color>
+    <color name="havoc_banner_title">@androidprv:color/materialColorOnPrimaryContainer</color>
+    <color name="havoc_banner_subtitle">@androidprv:color/materialColorOnSurfaceVariant</color>
+    <color name="havoc_banner_background">@androidprv:color/materialColorPrimaryContainer</color>
+    <color name="havoc_banner_glow">@androidprv:color/materialColorPrimary</color>
+    <color name="havoc_banner_border">@androidprv:color/materialColorOutlineVariant</color>
+
+    <!-- ============================================ -->
+    <!-- DYNAMIC DEVICE INFO CARD COLORS              -->
+    <!-- ============================================ -->
+    
+    <color name="device_info_card_background">@androidprv:color/materialColorSurfaceContainer</color>
+    <color name="device_info_card_background_dark">@androidprv:color/materialColorSurfaceContainer</color>
+    <color name="device_info_card_border">@androidprv:color/materialColorOutlineVariant</color>
+    <color name="device_info_card_border_dark">@androidprv:color/materialColorOutlineVariant</color>
+    
+    <!-- Icon tints use dynamic primary/secondary/tertiary -->
+    <color name="device_info_icon_tint">@androidprv:color/materialColorPrimary</color>
+    <color name="device_info_icon_tint_secondary">@androidprv:color/materialColorSecondary</color>
+    <color name="device_info_icon_tint_tertiary">@androidprv:color/materialColorTertiary</color>
+    <color name="device_info_icon_bg">@androidprv:color/materialColorPrimaryContainer</color>
+    
+    <!-- Text colors -->
+    <color name="device_info_title">@androidprv:color/materialColorOnSurface</color>
+    <color name="device_info_summary">@androidprv:color/materialColorOnSurfaceVariant</color>
+    <color name="device_info_value">@androidprv:color/materialColorOnSurface</color>
+
+    <!-- ============================================ -->
+    <!-- DYNAMIC PROGRESS BAR COLORS                  -->
+    <!-- ============================================ -->
+    
+    <color name="progress_track_background">@androidprv:color/materialColorSurfaceContainerHighest</color>
+    <color name="progress_track_dark_background">@androidprv:color/materialColorSurfaceContainerHighest</color>
+    <color name="progress_fill_primary">@androidprv:color/materialColorPrimary</color>
+    <color name="progress_fill_secondary">@androidprv:color/materialColorSecondary</color>
+    <color name="progress_fill_tertiary">@androidprv:color/materialColorTertiary</color>
+
+    <!-- ============================================ -->
+    <!-- DYNAMIC CATEGORY ACCENT COLORS               -->
+    <!-- Each category uses a different dynamic color  -->
+    <!-- ============================================ -->
+    
+    <!-- Network & Internet - Primary -->
+    <color name="category_accent_network">@androidprv:color/materialColorPrimary</color>
+    <color name="category_accent_network_surface">@androidprv:color/materialColorPrimaryContainer</color>
+    
+    <!-- Connected Devices - Secondary -->
+    <color name="category_accent_devices">@androidprv:color/materialColorSecondary</color>
+    <color name="category_accent_devices_surface">@androidprv:color/materialColorSecondaryContainer</color>
+    
+    <!-- Apps - Tertiary -->
+    <color name="category_accent_apps">@androidprv:color/materialColorTertiary</color>
+    <color name="category_accent_apps_surface">@androidprv:color/materialColorTertiaryContainer</color>
+    
+    <!-- Notifications - Primary variant -->
+    <color name="category_accent_notifications">@androidprv:color/materialColorPrimary</color>
+    <color name="category_accent_notifications_surface">@androidprv:color/materialColorPrimaryContainer</color>
+    
+    <!-- Battery - Secondary variant -->
+    <color name="category_accent_battery">@androidprv:color/materialColorSecondary</color>
+    <color name="category_accent_battery_surface">@androidprv:color/materialColorSecondaryContainer</color>
+    
+    <!-- Display - Tertiary variant -->
+    <color name="category_accent_display">@androidprv:color/materialColorTertiary</color>
+    <color name="category_accent_display_surface">@androidprv:color/materialColorTertiaryContainer</color>
+    
+    <!-- Sound - Primary -->
+    <color name="category_accent_sound">@androidprv:color/materialColorPrimary</color>
+    <color name="category_accent_sound_surface">@androidprv:color/materialColorPrimaryContainer</color>
+    
+    <!-- Storage - Secondary -->
+    <color name="category_accent_storage">@androidprv:color/materialColorSecondary</color>
+    <color name="category_accent_storage_surface">@androidprv:color/materialColorSecondaryContainer</color>
+    
+    <!-- Security - Tertiary -->
+    <color name="category_accent_security">@androidprv:color/materialColorTertiary</color>
+    <color name="category_accent_security_surface">@androidprv:color/materialColorTertiaryContainer</color>
+    
+    <!-- System - Outline as accent -->
+    <color name="category_accent_system">@androidprv:color/materialColorOutline</color>
+    <color name="category_accent_system_surface">@androidprv:color/materialColorSurfaceContainerHigh</color>
+
+</resources>

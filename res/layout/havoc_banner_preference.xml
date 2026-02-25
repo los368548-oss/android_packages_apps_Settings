@@ -158,11 +158,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp">
 
-        <!-- Glassmorphic background -->
+        <!-- Glassmorphic background - Dynamic Material You colors -->
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/device_info_card_background"/>
+            android:background="@drawable/device_info_card_background_dynamic"/>
 
         <!-- Top highlight -->
         <View

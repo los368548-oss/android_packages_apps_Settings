@@ -34,12 +34,12 @@
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground">
 
-        <!-- Animated gradient background -->
+        <!-- Animated gradient background - Dynamic Material You colors -->
         <View
             android:id="@+id/animated_background"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/homepage_category_background"/>
+            android:background="@drawable/homepage_category_background_dynamic"/>
 
         <!-- Shimmer overlay -->
         <View

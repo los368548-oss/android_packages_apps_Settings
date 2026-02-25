@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- Premium Device Info Card Background - Dynamic Material You Glassmorphic Style (Dark Mode) -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@androidprv:color/materialColorPrimary">
+    
+    <!-- Mask for ripple bounds -->
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFFFF"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+    
+    <item>
+        <layer-list>
+            
+            <!-- Level 1: Deep shadow base with dynamic gradient -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="135"
+                        android:startColor="@androidprv:color/materialColorSurfaceContainer"
+                        android:centerColor="@androidprv:color/materialColorSurfaceContainerHigh"
+                        android:endColor="@androidprv:color/materialColorSurfaceContainer"
+                        android:type="linear"/>
+                    <corners android:radius="20dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 2: Primary glass surface -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@androidprv:color/materialColorSurfaceContainerHigh"/>
+                    <corners android:radius="20dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 3: Diagonal light reflection - more prominent in dark -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="145"
+                        android:startColor="#00FFFFFF"
+                        android:centerColor="@androidprv:color/materialColorSurfaceBright"
+                        android:endColor="#00FFFFFF"
+                        android:type="linear"/>
+                    <corners android:radius="20dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 4: Top highlight for glass reflection -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="90"
+                        android:startColor="@androidprv:color/materialColorSurfaceBright"
+                        android:centerColor="#20FFFFFF"
+                        android:endColor="#00FFFFFF"
+                        android:type="linear"/>
+                    <corners android:radius="20dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 5: Enhanced accent glow at bottom with primary color -->
+            <item>
+                <shape android:shape="rectangle">
+                    <gradient
+                        android:angle="270"
+                        android:startColor="@androidprv:color/materialColorPrimaryContainer"
+                        android:centerColor="@androidprv:color/materialColorSurfaceBright"
+                        android:endColor="#00FFFFFF"
+                        android:type="linear"/>
+                    <corners android:radius="20dp"/>
+                </shape>
+            </item>
+            
+            <!-- Level 6: Inner glow border - more visible in dark -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#00FFFFFF"/>
+                    <corners android:radius="20dp"/>
+                    <stroke
+                        android:width="1.5dp"
+                        android:color="@androidprv:color/materialColorOutlineVariant"/>
+                </shape>
+            </item>
+            
+            <!-- Level 7: Outer accent glow border -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#00FFFFFF"/>
+                    <corners android:radius="20dp"/>
+                    <stroke
+                        android:width="0.5dp"
+                        android:color="@androidprv:color/materialColorSurfaceBright"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    
+</ripple>

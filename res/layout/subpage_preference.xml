@@ -14,8 +14,7 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-
-<!-- HavocOOS Enhanced Glassmorphic Homepage Preference v2.0 -->
+<!-- Subpage Preference Layout - Premium Glassmorphic Design v2.0 -->
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -26,10 +25,10 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/havoc_preference_margin_horizontal"
-        android:layout_marginEnd="@dimen/havoc_preference_margin_horizontal"
-        android:layout_marginTop="@dimen/havoc_preference_margin_vertical"
-        android:layout_marginBottom="@dimen/havoc_preference_margin_vertical">
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp">
 
         <!-- Glassmorphic background - Dynamic Material You colors -->
         <View
@@ -47,17 +46,17 @@
             android:background="#70FFFFFF"
             android:alpha="0.8"/>
 
-        <!-- Content Container -->
+        <!-- Content Container - Horizontal LinearLayout to support weights -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:minHeight="@dimen/havoc_preference_min_height"
-            android:paddingStart="@dimen/havoc_padding_relaxed"
-            android:paddingEnd="@dimen/havoc_padding_relaxed"
-            android:paddingTop="@dimen/havoc_padding_normal"
-            android:paddingBottom="@dimen/havoc_padding_normal">
+            android:minHeight="56dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
 
             <!-- Icon Container with accent glow -->
             <FrameLayout
@@ -68,6 +67,7 @@
 
                 <!-- Icon background glow -->
                 <View
+                    android:id="@+id/icon_glow"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/device_info_icon_bg"
@@ -83,95 +83,41 @@
 
             </FrameLayout>
 
-            <!-- Text Content -->
-            <RelativeLayout
-                android:id="@+id/text_frame"
+            <!-- Text Content - Now properly supports layout_weight -->
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:paddingTop="@dimen/havoc_padding_compact"
-                android:paddingBottom="@dimen/havoc_padding_compact"
-                android:paddingEnd="@dimen/havoc_padding_normal">
+                android:orientation="vertical"
+                android:gravity="center_vertical">
 
                 <!-- Title -->
                 <TextView
                     android:id="@android:id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:textAlignment="viewStart"
-                    android:singleLine="true"
-                    android:textAppearance="?android:attr/textAppearanceListItem"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.BodyLarge"
                     android:textColor="@color/device_info_title"
                     android:textStyle="bold"
                     android:textSize="15sp"
-                    android:ellipsize="marquee"/>
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:ellipsize="end"/>
 
                 <!-- Summary -->
                 <TextView
                     android:id="@android:id/summary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@android:id/title"
-                    android:layout_alignStart="@android:id/title"
                     android:layout_marginTop="2dp"
-                    android:textAlignment="viewStart"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textAppearance="@style/TextAppearance.SettingsLib.BodyMedium"
                     android:textColor="@color/device_info_summary"
                     android:textSize="13sp"
                     android:maxLines="2"
-                    android:ellipsize="end"/>
-            </RelativeLayout>
+                    android:ellipsize="end"
+                    android:visibility="gone"/>
 
-            <!-- Alert/Widget Container -->
-            <FrameLayout
-                android:id="@+id/alert_frame"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="36dp"
-                android:minHeight="36dp"
-                android:visibility="gone"
-                android:layout_gravity="center|end">
-
-                <ImageView
-                    android:id="@+id/alert_unnumbered"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:scaleType="fitCenter"
-                    android:layout_gravity="center"
-                    android:src="@drawable/circle"
-                    android:contentDescription="@null"
-                    android:tint="@color/settingslib_materialColorPrimary"/>
-
-                <FrameLayout
-                    android:id="@+id/alert_numbered_frame"
-                    android:minHeight="24dp"
-                    android:minWidth="24dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center">
-
-                    <ImageView
-                        android:id="@+id/alert_number_bg"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:src="@drawable/circle"
-                        android:contentDescription="@null"
-                        android:tint="@color/settingslib_materialColorSecondaryContainer"/>
-
-                    <TextView
-                        android:id="@+id/alert_number_fg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="@color/settingslib_materialColorOnSecondaryContainer"
-                        style="@style/TextAppearance.SettingsLib.TitleMedium" />
-                </FrameLayout>
-
-            </FrameLayout>
+            </LinearLayout>
 
             <!-- Widget frame (for switches, etc.) -->
             <LinearLayout

@@ -16,19 +16,48 @@
 -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Enhanced Glassmorphic backgrounds for preference cards -->
-    <drawable name="glassmorphic_preference_background">@drawable/glassmorphic_bg</drawable>
-    <drawable name="glassmorphic_preference_background_dark">@drawable/glassmorphic_bg_dark</drawable>
+    <!-- ============================================ -->
+    <!-- MATERIAL YOU DYNAMIC GLASSMORPHIC BACKGROUNDS -->
+    <!-- Colors change based on wallpaper (Monet)      -->
+    <!-- ============================================ -->
     
+    <!-- Dynamic glassmorphic backgrounds - colors adapt to wallpaper -->
+    <drawable name="glassmorphic_preference_background_dynamic">@drawable/glassmorphic_bg_dynamic</drawable>
+    <drawable name="glassmorphic_preference_selector_dynamic">@drawable/glassmorphic_selector_dynamic</drawable>
+
+    <!-- ============================================ -->
+    <!-- STATIC GLASSMORPHIC BACKGROUNDS              -->
+    <!-- Fixed colors (original implementation)       -->
+    <!-- ============================================ -->
+    
+    <!-- Enhanced Glassmorphic backgrounds for preference cards -->
+    <!-- Note: Dark mode is handled via -night folder qualifiers -->
+    <drawable name="glassmorphic_preference_background">@drawable/glassmorphic_bg</drawable>
+    <drawable name="glassmorphic_preference_background_dark">@drawable/glassmorphic_selector_dark</drawable>
+
     <!-- Glassmorphic selectors with ripple effect -->
     <drawable name="glassmorphic_preference_selector">@drawable/glassmorphic_selector</drawable>
     <drawable name="glassmorphic_preference_selector_dark">@drawable/glassmorphic_selector_dark</drawable>
-    
+
     <!-- Premium shimmer variants -->
     <drawable name="glassmorphic_shimmer">@drawable/glassmorphic_shimmer</drawable>
     <drawable name="glassmorphic_shimmer_dark">@drawable/glassmorphic_shimmer_dark</drawable>
-    
+
     <!-- Accent tinted variant -->
     <drawable name="glassmorphic_accent">@drawable/glassmorphic_accent</drawable>
+
+    <!-- ============================================ -->
+    <!-- CATEGORY-SPECIFIC ACCENT DRAWABLES           -->
+    <!-- Each category has its own accent color        -->
+    <!-- ============================================ -->
+    
+    <drawable name="glassmorphic_network_accent">@drawable/glassmorphic_network_accent</drawable>
+    <drawable name="glassmorphic_display_accent">@drawable/glassmorphic_display_accent</drawable>
+    <drawable name="glassmorphic_sound_accent">@drawable/glassmorphic_sound_accent</drawable>
+    <drawable name="glassmorphic_battery_accent">@drawable/glassmorphic_battery_accent</drawable>
+    <drawable name="glassmorphic_storage_accent">@drawable/glassmorphic_storage_accent</drawable>
+    <drawable name="glassmorphic_security_accent">@drawable/glassmorphic_security_accent</drawable>
+    <drawable name="glassmorphic_apps_accent">@drawable/glassmorphic_apps_accent</drawable>
+    <drawable name="glassmorphic_notifications_accent">@drawable/glassmorphic_notifications_accent</drawable>
 
 </resources>

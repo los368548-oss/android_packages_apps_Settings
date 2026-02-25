@@ -16,29 +16,56 @@
   limitations under the License.
   -->
 
-<!-- HavocOOS: Enhanced Glassmorphic card preference layout with ripple -->
-<com.google.android.material.card.MaterialCardView
+<!-- HavocOOS: Enhanced Glassmorphic Card Preference Layout v2.0 -->
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="@dimen/havoc_preference_margin_vertical"
-    android:layout_marginStart="@dimen/havoc_preference_margin_horizontal"
-    android:layout_marginEnd="@dimen/havoc_preference_margin_horizontal"
-    android:clickable="true"
-    android:focusable="true"
-    style="@style/HavocOOSCardStyle">
+    android:clipToPadding="false"
+    android:clipChildren="false">
 
-    <!-- Glassmorphic background layer -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/glassmorphic_selector"/>
-
-    <include
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="-8dp"
-        layout="@layout/card_preference"/>
-</com.google.android.material.card.MaterialCardView>
+        android:layout_marginVertical="@dimen/havoc_preference_margin_vertical"
+        android:layout_marginStart="@dimen/havoc_preference_margin_horizontal"
+        android:layout_marginEnd="@dimen/havoc_preference_margin_horizontal">
+
+        <!-- Glassmorphic background layer - Dynamic Material You colors -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/glassmorphic_selector_dynamic"/>
+
+        <!-- Top highlight reflection -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_gravity="top"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="#70FFFFFF"
+            android:alpha="0.8"/>
+
+        <!-- Content Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/havoc_padding_relaxed"
+            android:paddingEnd="@dimen/havoc_padding_relaxed"
+            android:paddingTop="@dimen/havoc_padding_normal"
+            android:paddingBottom="@dimen/havoc_padding_normal">
+
+            <!-- Include standard card preference content -->
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/card_preference"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
