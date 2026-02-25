@@ -14,9 +14,9 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!-- Premium Glassmorphic State Selector for Dark Mode with Enhanced Depth -->
+<!-- Premium Glassmorphic State Selector for Dark Mode - Enhanced Modern Design -->
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="#28FFFFFF">
+    android:color="@color/glassmorphic_ripple_dark">
     
     <!-- Mask for ripple bounds -->
     <item android:id="@android:id/mask">
@@ -35,9 +35,9 @@
                 <shape android:shape="rectangle">
                     <gradient
                         android:angle="135"
-                        android:startColor="#10182030"
-                        android:centerColor="#08101520"
-                        android:endColor="#04080A10"
+                        android:startColor="@color/glassmorphic_gradient_dark_start"
+                        android:centerColor="@color/glassmorphic_gradient_dark_center"
+                        android:endColor="@color/glassmorphic_gradient_dark_end"
                         android:type="linear"/>
                     <corners android:radius="@dimen/havoc_corner_radius"/>
                 </shape>
@@ -46,7 +46,7 @@
             <!-- Layer 2: Primary glass surface with purple tint -->
             <item>
                 <shape android:shape="rectangle">
-                    <solid android:color="#35182535"/>
+                    <solid android:color="@color/glassmorphic_surface_dark"/>
                     <corners android:radius="@dimen/havoc_corner_radius"/>
                 </shape>
             </item>
@@ -57,7 +57,7 @@
                     <gradient
                         android:angle="145"
                         android:startColor="#00FFFFFF"
-                        android:centerColor="#12FFFFFF"
+                        android:centerColor="@color/glassmorphic_highlight_dark_shimmer"
                         android:endColor="#00FFFFFF"
                         android:type="linear"/>
                     <corners android:radius="@dimen/havoc_corner_radius"/>
@@ -69,7 +69,7 @@
                 <shape android:shape="rectangle">
                     <gradient
                         android:angle="90"
-                        android:startColor="#25FFFFFF"
+                        android:startColor="@color/glassmorphic_highlight_dark_top"
                         android:centerColor="#10FFFFFF"
                         android:endColor="#00FFFFFF"
                         android:type="linear"/>
@@ -77,12 +77,12 @@
                 </shape>
             </item>
             
-            <!-- Layer 5: Subtle inner glow from bottom with purple tint -->
+            <!-- Layer 5: Subtle inner glow from bottom with accent tint -->
             <item>
                 <shape android:shape="rectangle">
                     <gradient
                         android:angle="270"
-                        android:startColor="#10406080"
+                        android:startColor="@color/glassmorphic_accent_surface"
                         android:centerColor="#08305070"
                         android:endColor="#00FFFFFF"
                         android:type="linear"/>
@@ -97,18 +97,18 @@
                     <corners android:radius="@dimen/havoc_corner_radius"/>
                     <stroke
                         android:width="1dp"
-                        android:color="#22FFFFFF"/>
+                        android:color="@color/glassmorphic_border_dark_primary"/>
                 </shape>
             </item>
             
-            <!-- Layer 7: Outer glow border with purple tint -->
+            <!-- Layer 7: Outer glow border with accent tint -->
             <item>
                 <shape android:shape="rectangle">
                     <solid android:color="#00FFFFFF"/>
                     <corners android:radius="@dimen/havoc_corner_radius"/>
                     <stroke
                         android:width="0.5dp"
-                        android:color="#184060FF"/>
+                        android:color="@color/glassmorphic_border_dark_glow"/>
                 </shape>
             </item>
         </layer-list>

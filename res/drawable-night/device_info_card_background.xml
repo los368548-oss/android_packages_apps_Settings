@@ -14,76 +14,91 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!-- Premium Glassmorphic Card Background - Night Mode Override -->
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- Premium Glassmorphic Card Background - Night Mode Override v3.0 -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/glassmorphic_ripple_dark">
     
-    <!-- Base layer with subtle purple tint -->
-    <item>
+    <!-- Mask for ripple bounds -->
+    <item android:id="@android:id/mask">
         <shape android:shape="rectangle">
+            <solid android:color="#FFFFFFFF"/>
             <corners android:radius="20dp"/>
-            <solid android:color="#30182535"/>
         </shape>
     </item>
     
-    <!-- Primary glass surface -->
-    <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
-        <shape android:shape="rectangle">
-            <corners android:radius="19dp"/>
-            <solid android:color="#C8121214"/>
-        </shape>
-    </item>
-    
-    <!-- Top highlight reflection -->
-    <item android:top="1dp" android:left="1dp" android:right="1dp" android:height="25dp">
-        <shape android:shape="rectangle">
-            <corners android:topLeftRadius="19dp" android:topRightRadius="19dp"/>
-            <gradient
-                android:angle="90"
-                android:startColor="#20FFFFFF"
-                android:centerColor="#08FFFFFF"
-                android:endColor="#00FFFFFF"/>
-        </shape>
-    </item>
-    
-    <!-- Diagonal light reflection -->
-    <item android:top="1dp" android:left="1dp" android:right="1dp" android:height="35dp">
-        <shape android:shape="rectangle">
-            <corners android:topLeftRadius="19dp" android:topRightRadius="19dp"/>
-            <gradient
-                android:angle="45"
-                android:startColor="#00FFFFFF"
-                android:centerColor="#10FFFFFF"
-                android:endColor="#00FFFFFF"/>
-        </shape>
-    </item>
-    
-    <!-- Inner glow from bottom with accent -->
-    <item android:bottom="1dp" android:left="1dp" android:right="1dp" android:height="20dp">
-        <shape android:shape="rectangle">
-            <corners android:bottomLeftRadius="19dp" android:bottomRightRadius="19dp"/>
-            <gradient
-                android:angle="270"
-                android:startColor="#15FF8A65"
-                android:endColor="#00FF8A65"/>
-        </shape>
-    </item>
-    
-    <!-- Outer border glow -->
     <item>
-        <shape android:shape="rectangle">
-            <corners android:radius="20dp"/>
-            <stroke android:width="1dp" android:color="#20FFFFFF"/>
-            <solid android:color="@android:color/transparent"/>
-        </shape>
+        <layer-list>
+            
+            <!-- Base layer with subtle purple tint -->
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="20dp"/>
+                    <solid android:color="@color/glassmorphic_surface_dark"/>
+                </shape>
+            </item>
+            
+            <!-- Primary glass surface -->
+            <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="19dp"/>
+                    <solid android:color="@color/device_info_card_background_dark"/>
+                </shape>
+            </item>
+            
+            <!-- Top highlight reflection -->
+            <item android:top="1dp" android:left="1dp" android:right="1dp" android:height="24dp">
+                <shape android:shape="rectangle">
+                    <corners android:topLeftRadius="19dp" android:topRightRadius="19dp"/>
+                    <gradient
+                        android:angle="90"
+                        android:startColor="@color/glassmorphic_highlight_dark_top"
+                        android:centerColor="#08FFFFFF"
+                        android:endColor="#00FFFFFF"/>
+                </shape>
+            </item>
+            
+            <!-- Diagonal light reflection -->
+            <item android:top="1dp" android:left="1dp" android:right="1dp" android:height="35dp">
+                <shape android:shape="rectangle">
+                    <corners android:topLeftRadius="19dp" android:topRightRadius="19dp"/>
+                    <gradient
+                        android:angle="45"
+                        android:startColor="#00FFFFFF"
+                        android:centerColor="@color/glassmorphic_highlight_dark_shimmer"
+                        android:endColor="#00FFFFFF"/>
+                </shape>
+            </item>
+            
+            <!-- Inner glow from bottom with accent -->
+            <item android:bottom="1dp" android:left="1dp" android:right="1dp" android:height="18dp">
+                <shape android:shape="rectangle">
+                    <corners android:bottomLeftRadius="19dp" android:bottomRightRadius="19dp"/>
+                    <gradient
+                        android:angle="270"
+                        android:startColor="@color/glassmorphic_accent_surface"
+                        android:endColor="#00FF8A65"/>
+                </shape>
+            </item>
+            
+            <!-- Outer border glow -->
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="20dp"/>
+                    <stroke android:width="1dp" android:color="@color/glassmorphic_border_dark_primary"/>
+                    <solid android:color="@android:color/transparent"/>
+                </shape>
+            </item>
+            
+            <!-- Inner subtle border -->
+            <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
+                <shape android:shape="rectangle">
+                    <corners android:radius="19dp"/>
+                    <stroke android:width="0.5dp" android:color="@color/glassmorphic_border_dark_glow"/>
+                    <solid android:color="@android:color/transparent"/>
+                </shape>
+            </item>
+            
+        </layer-list>
     </item>
     
-    <!-- Inner subtle border -->
-    <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
-        <shape android:shape="rectangle">
-            <corners android:radius="19dp"/>
-            <stroke android:width="0.5dp" android:color="#25FFFFFF"/>
-            <solid android:color="@android:color/transparent"/>
-        </shape>
-    </item>
-    
-</layer-list>
+</ripple>

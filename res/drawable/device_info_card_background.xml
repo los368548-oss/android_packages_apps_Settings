@@ -14,9 +14,9 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!-- Premium Device Info Card Background - Enhanced Glassmorphic Style -->
+<!-- Premium Device Info Card Background - Enhanced Glassmorphic Style v3.0 -->
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="#35FFFFFF">
+    android:color="@color/glassmorphic_ripple_light">
     
     <!-- Mask for ripple bounds -->
     <item android:id="@android:id/mask">
@@ -34,9 +34,9 @@
                 <shape android:shape="rectangle">
                     <gradient
                         android:angle="135"
-                        android:startColor="#08C8E6FF"
-                        android:centerColor="#04A8C2FF"
-                        android:endColor="#0090B0D0"
+                        android:startColor="@color/glassmorphic_gradient_start"
+                        android:centerColor="@color/glassmorphic_gradient_center"
+                        android:endColor="@color/glassmorphic_gradient_end"
                         android:type="linear"/>
                     <corners android:radius="20dp"/>
                 </shape>
@@ -45,7 +45,7 @@
             <!-- Level 2: Primary glass surface with cyan tint -->
             <item>
                 <shape android:shape="rectangle">
-                    <solid android:color="#48E8F4FD"/>
+                    <solid android:color="@color/device_info_card_background"/>
                     <corners android:radius="20dp"/>
                 </shape>
             </item>
@@ -56,7 +56,7 @@
                     <gradient
                         android:angle="145"
                         android:startColor="#00FFFFFF"
-                        android:centerColor="#20FFFFFF"
+                        android:centerColor="@color/glassmorphic_highlight_shimmer"
                         android:endColor="#00FFFFFF"
                         android:type="linear"/>
                     <corners android:radius="20dp"/>
@@ -68,8 +68,8 @@
                 <shape android:shape="rectangle">
                     <gradient
                         android:angle="90"
-                        android:startColor="#65FFFFFF"
-                        android:centerColor="#20FFFFFF"
+                        android:startColor="@color/glassmorphic_highlight_top"
+                        android:centerColor="#18FFFFFF"
                         android:endColor="#00FFFFFF"
                         android:type="linear"/>
                     <corners android:radius="20dp"/>
@@ -81,8 +81,8 @@
                 <shape android:shape="rectangle">
                     <gradient
                         android:angle="270"
-                        android:startColor="#15FF8A65"
-                        android:centerColor="#08FF8A65"
+                        android:startColor="@color/glassmorphic_accent_surface"
+                        android:centerColor="@color/glassmorphic_accent_gradient_start"
                         android:endColor="#00FFFFFF"
                         android:type="linear"/>
                     <corners android:radius="20dp"/>
@@ -96,7 +96,7 @@
                     <corners android:radius="20dp"/>
                     <stroke
                         android:width="1dp"
-                        android:color="#55FFFFFF"/>
+                        android:color="@color/device_info_card_border"/>
                 </shape>
             </item>
             
@@ -107,7 +107,7 @@
                     <corners android:radius="20dp"/>
                     <stroke
                         android:width="0.5dp"
-                        android:color="#30FF8A65"/>
+                        android:color="@color/glassmorphic_accent_border"/>
                 </shape>
             </item>
         </layer-list>

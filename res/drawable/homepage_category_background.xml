@@ -14,56 +14,56 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!-- Homepage Category Background - Premium Glassmorphic Design -->
+<!-- Homepage Category Background - Premium Glassmorphic Design v3.0 -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     
     <!-- Base layer with subtle cyan tint -->
     <item>
         <shape android:shape="rectangle">
-            <corners android:radius="20dp"/>
-            <solid android:color="#30E8F4FD"/>
+            <corners android:radius="24dp"/>
+            <solid android:color="@color/glassmorphic_surface_light"/>
         </shape>
     </item>
     
     <!-- Primary glass surface -->
     <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
         <shape android:shape="rectangle">
-            <corners android:radius="19dp"/>
-            <solid android:color="#D5FFFFFF"/>
+            <corners android:radius="23dp"/>
+            <solid android:color="#D8FFFFFF"/>
         </shape>
     </item>
     
     <!-- Top highlight reflection -->
-    <item android:top="1dp" android:left="1dp" android:right="1dp" android:height="30dp">
+    <item android:top="1dp" android:left="1dp" android:right="1dp" android:height="28dp">
         <shape android:shape="rectangle">
-            <corners android:topLeftRadius="19dp" android:topRightRadius="19dp"/>
+            <corners android:topLeftRadius="23dp" android:topRightRadius="23dp"/>
             <gradient
                 android:angle="90"
-                android:startColor="#45FFFFFF"
-                android:centerColor="#15FFFFFF"
+                android:startColor="@color/glassmorphic_highlight_top"
+                android:centerColor="#12FFFFFF"
                 android:endColor="#00FFFFFF"/>
         </shape>
     </item>
     
     <!-- Diagonal light reflection -->
-    <item android:top="1dp" android:left="1dp" android:right="1dp" android:height="45dp">
+    <item android:top="1dp" android:left="1dp" android:right="1dp" android:height="42dp">
         <shape android:shape="rectangle">
-            <corners android:topLeftRadius="19dp" android:topRightRadius="19dp"/>
+            <corners android:topLeftRadius="23dp" android:topRightRadius="23dp"/>
             <gradient
                 android:angle="45"
                 android:startColor="#00FFFFFF"
-                android:centerColor="#18FFFFFF"
+                android:centerColor="@color/glassmorphic_highlight_shimmer"
                 android:endColor="#00FFFFFF"/>
         </shape>
     </item>
     
     <!-- Inner glow from bottom -->
-    <item android:bottom="1dp" android:left="1dp" android:right="1dp" android:height="20dp">
+    <item android:bottom="1dp" android:left="1dp" android:right="1dp" android:height="18dp">
         <shape android:shape="rectangle">
-            <corners android:bottomLeftRadius="19dp" android:bottomRightRadius="19dp"/>
+            <corners android:bottomLeftRadius="23dp" android:bottomRightRadius="23dp"/>
             <gradient
                 android:angle="270"
-                android:startColor="#12FF8A65"
+                android:startColor="@color/glassmorphic_accent_surface"
                 android:endColor="#00FF8A65"/>
         </shape>
     </item>
@@ -71,8 +71,8 @@
     <!-- Outer border glow -->
     <item>
         <shape android:shape="rectangle">
-            <corners android:radius="20dp"/>
-            <stroke android:width="1dp" android:color="#40FFFFFF"/>
+            <corners android:radius="24dp"/>
+            <stroke android:width="1dp" android:color="@color/glassmorphic_border_primary"/>
             <solid android:color="@android:color/transparent"/>
         </shape>
     </item>
@@ -80,8 +80,8 @@
     <!-- Inner subtle border -->
     <item android:top="1dp" android:bottom="1dp" android:left="1dp" android:right="1dp">
         <shape android:shape="rectangle">
-            <corners android:radius="19dp"/>
-            <stroke android:width="0.5dp" android:color="#50FFFFFF"/>
+            <corners android:radius="23dp"/>
+            <stroke android:width="0.5dp" android:color="@color/glassmorphic_border_glow"/>
             <solid android:color="@android:color/transparent"/>
         </shape>
     </item>
